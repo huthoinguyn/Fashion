@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply font-Montserrat;
+}
+
 header ul li a {
   @apply hover:text-pri block py-5 px-4;
 }
@@ -12,6 +16,24 @@ header .action .icon span {
   @apply hover:scale-125 transition-all block;
 }
 
+.slider {
+  @apply w-full relative h-[570px] bg-[url('./imgs/slider-image-01.webp')] bg-cover bg-no-repeat bg-center;
+}
+
 .is-fixed {
   @apply h-[65px] fixed top-0;
+}
+
+.is-active {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:bg-pri after:rounded-md after:z-50 after:h-0.5 after:w-full;
+}
+
+.is-fadeUp {
+  @apply animate-fadeUp;
+}
+.is-fadeIn {
+  @apply animate-fadeIn;
+}
+.is-fadeRight {
+  @apply animate-fadeRight;
 }

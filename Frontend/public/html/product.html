@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/loading.css" />
+    <link href="../output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/loading.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <style></style>
   </head>
   <body>
     <div id="loading">
@@ -31,13 +30,13 @@
         class="w-full h-[80px] flex justify-around items-center transition-all bg-white z-50"
       >
         <div class="logo">
-          <img src="./imgs/logo.png" alt="" />
+          <img src="../imgs/logo.png" alt="" />
         </div>
         <ul
           class="flex list-none font-Montserrat font-normal text-[15px] leading-[26px]"
         >
-          <li class="is-active"><a href="">Home</a></li>
-          <li><a href="./html/product.html">Product</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li class="is-active"><a href="">Product</a></li>
           <li><a href="">Blog</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
@@ -50,38 +49,14 @@
           </div>
           <div class="line w-[1px] h-4 mx-4 bg-gray-400"></div>
           <div class="cart icon">
-            <a href="" class="">
+            <a href="">
               <span class="material-symbols-outlined"> shopping_cart </span>
             </a>
           </div>
         </div>
       </header>
-      <div id="slider" class="slider">
-        <div
-          class="slider-wrap flex justify-center flex-col max-w-[640px] absolute top-1/2 right-1/2 translate-y-[-50%] overflow-hidden"
-        >
-          <h3 class="text-6xl tracking-wide is-fadeIn text-white">
-            <span class="text-white font-extrabold uppercase">
-              This is title
-            </span>
-          </h3>
-          <p
-            class="mt-4 mb-9 is-fadeRight font-normal leading-6 text-white text-base"
-          >
-            <span class=""></span>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-            architecto aperiam minus possimus minima.
-          </p>
-          <a
-            href="./html/product.html"
-            class="w-fit px-6 py-2 bg-pri text-white rounded-sm is-fadeUp"
-            >Shopping now</a
-          >
-          `;
-        </div>
-      </div>
       <content class="h-[1000px]"> </content>
-      <footer class="text-[#ff6800]">HII</footer>
+      <footer></footer>
     </div>
     <script>
       const $ = document.querySelector.bind(document);
@@ -91,18 +66,16 @@
       window.addEventListener("load", () => {
         loading.style.display = "none";
         document.body.style = "overflow:auto; height:auto; position:relative";
-
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > banner.offsetHeight) {
-            document.body.style.paddingTop = `${header.offsetHeight}px`;
-            header.classList.add("is-fixed");
-          } else {
-            header.classList.remove("is-fixed");
-            document.body.style.paddingTop = 0;
-          }
-        });
+      });
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > banner.offsetHeight) {
+          document.body.style.paddingTop = `${header.offsetHeight}px`;
+          header.classList.add("is-fixed");
+        } else {
+          header.classList.remove("is-fixed");
+          document.body.style.paddingTop = 0;
+        }
       });
     </script>
-    <script src="./js/slider.js"></script>
   </body>
 </html>
