@@ -16,6 +16,10 @@ header .action .icon span {
   @apply hover:scale-125 transition-all block;
 }
 
+.action .material-symbols-outlined {
+  @apply text-[28px];
+}
+
 .slider {
   @apply w-full relative h-[570px] bg-[url('./imgs/slider-image-01.webp')] bg-cover bg-no-repeat bg-center;
 }
@@ -36,4 +40,24 @@ header .action .icon span {
 }
 .is-fadeRight {
   @apply animate-fadeRight;
+}
+
+.cate-item {
+  @apply relative overflow-hidden;
+}
+
+.cate-image {
+  @apply w-full h-full object-cover hover:scale-125 transition-all duration-1000 cursor-pointer;
+}
+
+.cate-btn {
+  @apply bg-white font-normal leading-7 uppercase w-[179px] h-12 absolute bottom-5 left-1/2 translate-x-[-50%] flex justify-center items-center hover:bg-pri hover:text-white transition-all duration-300 shadow-sm;
+}
+
+.ct-button {
+  @apply uppercase rounded-full bg-black text-white hover:bg-pri transition-all duration-300 font-normal leading-7 cursor-pointer;
+}
+
+.product-image:hover .ct-button {
+  @apply opacity-100 translate-y-0;
 }
