@@ -25,7 +25,7 @@ header .action .icon span {
 }
 
 .is-fixed {
-  @apply h-[65px] fixed top-0;
+  @apply h-[65px] fixed top-0 right-0 left-0;
 }
 
 .is-active {
@@ -60,4 +60,16 @@ header .action .icon span {
 
 .product-image:hover .ct-button {
   @apply opacity-100 translate-y-0;
+}
+
+.follow-item:hover .blur {
+  @apply opacity-90;
+}
+
+.follow-item:hover .content {
+  @apply translate-y-0;
+}
+
+.follow-item:hover .favorite {
+  @apply translate-x-0 translate-y-0;
 }
