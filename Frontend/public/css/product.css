@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.categories ul li {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+  padding-top: 4px;
+  color: #999;
+  cursor: pointer;
+}
+.categories ul li:hover {
+  color: #e65540;
+}
+.color span {
+  cursor: pointer;
+}
+.filter-wrap {
+  margin: 0 auto;
+  padding: 6px;
+  width: 100%;
+  border: 2px solid #eeeeee;
+  border-radius: 3px;
+}
+
+.filter-range-wrapper {
+  margin-bottom: 10px;
+  padding: 16px 6px;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+.filter-range {
+  position: relative;
+}
+
+.filter-range-scale {
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.filter-range-bar {
+  height: 2px;
+  width: 75%;
+  background-color: #00ca74;
+}
+
+.filter-range-handle {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  box-sizing: content-box;
+  padding: 0;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  background-color: #b7b7b7;
+  cursor: pointer;
+}
+
+.filter-range-handle.min {
+  left: 0;
+}
+
+.filter-range-handle.max {
+  left: 75%;
+}
+
+.filter-interval {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.filter-interval label {
+  width: 50%;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.filter-interval label:last-child {
+  text-align: right;
+}
+
+.filter-interval input {
+  margin-left: 8px;
+  width: 80px;
+  height: 38px;
+  border-radius: 2px;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-align: center;
+  background-color: #eeeeee;
+}

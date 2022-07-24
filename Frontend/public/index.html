@@ -1,526 +1,676 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/loading.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <style></style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/loading.css" />
-  <link rel="stylesheet" href="./css/cart.css" />
-  <link rel="stylesheet" href="./css/footer.css">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <style>
-    
-    
-  </style>
-</head>
-
-<body>
-  <div id="loading">
-    <div class="blur"></div>
-    <div class="load">
-      <hr />
-      <hr />
-      <hr />
-      <hr />
-    </div>
-  </div>
-  <div id="root" class="max-w-screen-2xl w-full mx-auto">
-    <div id="cart" class="cart-container fixed inset-0 z-50 hidden">
-      <div
-        class="fixed max-w-screen-lg h-[600px] z-[999] mx-auto inset-0 top-1/2 -translate-y-[50%] rounded-md bg-white shadow-2xl">
-        <div class="wrap cf h-[100%]">
-          <div class="heading cf h-[10%]">
-            <h1>My Cart</h1>
-            <a href="#" class="continue">Continue Shopping</a>
-          </div>
-          <div class="cart h-[65%] overflow-y-auto">
-            <ul class="tableHead">
-              <li class="prodHeader w-[60%]">Product</li>
-              <li class="w-[10%]">Quantity</li>
-              <li class="w-[20%]">Total</li>
-              <li class="w-[10%]">Remove</li>
-            </ul>
-            <ul class="cartWrap">
-              <!--<li class="items even">Item 2</li>-->
-            </ul>
-          </div>
-          <div class="subtotal cf h-[25%]">
-            <ul>
-              <li class="totalRow">
-                <span class="label">Subtotal</span><span class="value">$35.00</span>
-              </li>
-
-              <li class="totalRow">
-                <span class="label">Shipping</span><span class="value">$5.00</span>
-              </li>
-
-              <li class="totalRow">
-                <span class="label">Tax</span><span class="value">$4.00</span>
-              </li>
-              <li class="totalRow final">
-                <span class="label">Total</span><span class="value">$44.00</span>
-              </li>
-              <li class="totalRow">
-                <a href="#" class="btn continue">Checkout</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <body>
+    <div id="loading">
+      <div class="blur"></div>
+      <div class="load">
+        <hr />
+        <hr />
+        <hr />
+        <hr />
       </div>
     </div>
-    <div class="banner max-w-full h-[45px] leading-[45px] text-center bg-gray-200">
-      Free shipping for standard order over $100
-    </div>
-    <header class="w-full h-[80px] flex justify-around items-center transition-all duration-300 bg-white z-50">
-      <div class="logo">
-        <img src="./imgs/logo.png" alt="" />
-      </div>
-      <ul class="flex list-none font-Montserrat font-normal text-[15px] leading-[26px]">
-        <li class="is-active"><a href="">Home</a></li>
-        <li><a href="./html/product.html">Product</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-      <div class="action flex items-center">
-        <div class="user icon">
-          <a href="./html/form.html" class="">
-            <span class="material-symbols-outlined"> person </span>
-          </a>
-        </div>
-        <div class="line w-[1px] h-4 mx-4 bg-gray-400"></div>
-        <div id="cart-icon" class="icon relative">
-          <a href="" class="">
-            <span class="material-symbols-outlined"> shopping_cart </span>
-          </a>
-          <div
-            class="cart-noti w-4 h-4 rounded-full absolute -top-2 -right-2 bg-pri hidden justify-center items-center">
-            <p class="text-[10px] text-white"></p>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div id="slider" class="slider">
-      <div
-        class="slider-wrap flex justify-center flex-col max-w-[640px] absolute top-1/2 right-1/2 translate-y-[-50%] overflow-hidden">
-        <h3 class="text-6xl tracking-wide is-fadeIn text-white">
-          <span class="text-white font-extrabold uppercase">
-            This is title
-          </span>
-        </h3>
-        <p class="mt-4 mb-9 is-fadeRight font-normal leading-6 text-white text-base">
-          <span class=""></span>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
-          architecto aperiam minus possimus minima.
-        </p>
-        <a href="./html/product.html" class="w-fit px-6 py-2 bg-pri text-white rounded-sm is-fadeUp">Shopping now</a>
-        `;
-      </div>
-    </div>
-    <div id="content" class="max-w-screen-xl mx-auto">
-      <!-- Category -->
-      <div class="cate-wrap grid grid-cols-3 h-[1000px] gap-7 py-10">
-        <div class="item1 cate-item row-span-5">
-          <img src="./imgs/category-image-01.jpg" alt="" class="cate-image" />
-          <a href="" class="cate-btn">Dresses</a>
-        </div>
-        <div class="item2 cate-item col-start-2 row-start-1 row-span-4">
-          <img src="./imgs/category-image-02.jpg" alt="" class="cate-image" />
-          <a href="" class="cate-btn">Watches</a>
-        </div>
-        <div class="item3 cate-item row-span-5">
-          <img src="./imgs/category-image-03.jpg" alt="" class="cate-image" />
-          <a href="" class="cate-btn">Bags</a>
-        </div>
-        <div class="item4 cate-item row-span-5">
-          <img src="./imgs/category-image-04.jpg" alt="" class="cate-image" />
-          <a href="" class="cate-btn">Sunglasses</a>
-        </div>
-        <div class="item5 cate-item row-start-5 col-start-2 row-span-6">
-          <img src="./imgs/category-image-05.jpg" alt="" class="cate-image" />
-          <a href="" class="cate-btn">Footerwear</a>
-        </div>
+    <div id="root" class="max-w-screen-2xl w-full mx-auto">
+      <!-- cart -->
+      <div id="cart" class="cart-container fixed inset-0 z-50 hidden">
         <div
-          class="item6 cate-item row-span-5 flex justify-center items-center flex-col bg-[url('./imgs/category-image-06.webp')] bg-cover bg-no-repeat h-full px-[60px]">
-          <h3 class="text-3xl uppercase text-gray-900 leading-9 font-medium text-center pb-2">SIGN UP & GET 20% OFF</h3>
-          <p class="text-base text-gray-400 leading-6 font-normal text-center">Be the frist to know about the latest
-            fashion news and get exclu-sive offers</p>
-          <a href="./html/form.html" class="ct-button text-base px-14 py-2 mt-6">sign up</a>
-        </div>
-      </div>
-      <!-- Feature Product -->
-      <div class="featured-products pt-[45px] pb-[105px]">
-        <h3 class="title uppercase font-semibold text-center pb-[60px] leading-9 text-3xl">feature products</h3>
-        <div class="product-list grid grid-cols-4 gap-7">
-          <div class="item1 product-item">
-            <div
-              class="product-image h-[380px] bg-[url('./imgs/featured-product-image-01.jpg')] bg-cover bg-no-repeat bg-center">
-              <!-- <a href="#"> -->
-              <div
-                class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group">
-                <div
-                  class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1">
-                  Add to cart
-                </div>
-              </div>
-              <!-- </a> -->
+          class="fixed max-w-screen-lg h-[600px] z-[999] mx-auto inset-0 top-1/2 -translate-y-[48%] rounded-md bg-white shadow-2xl"
+        >
+          <div class="wrap cf h-[100%]">
+            <div class="heading cf h-[10%]">
+              <h1>My Cart</h1>
+              <a href="#" class="continue">Continue Shopping</a>
             </div>
-            <div class="product-info my-8">
-              <a href="#">
-                <div class="product-name text-base mb-1 hover:text-pri">
-                  Herschel supply co 25l
-                </div>
-              </a>
-              <div class="product-price">
-                <span class="text-gray-800">$75.00</span>
-              </div>
+            <div class="cart h-[65%] overflow-y-auto">
+              <ul class="tableHead">
+                <li class="prodHeader w-[60%]">Product</li>
+                <li class="w-[10%]">Quantity</li>
+                <li class="w-[20%]">Total</li>
+                <li class="w-[10%]">Remove</li>
+              </ul>
+              <ul class="cartWrap">
+                <!--<li class="items even">Item 2</li>-->
+              </ul>
             </div>
-          </div>
-          <div class="item2 product-item">
-            <div
-              class="product-image h-[380px] bg-[url('./imgs/category-image-02.jpg')] bg-cover bg-no-repeat bg-center">
-              <!-- <a href="#"> -->
-              <div
-                class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group">
-                <div
-                  class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1">
-                  Add to cart
-                </div>
-              </div>
-              <!-- </a> -->
-            </div>
-            <div class="product-info my-8">
-              <a href="#">
-                <div class="product-name text-base mb-1 hover:text-pri">
-                  Denim jacket blue
-                </div>
-              </a>
-              <div class="product-price">
-                <span class="text-gray-800">$92.50</span>
-              </div>
-            </div>
-          </div>
-          <div class="item3 product-item">
-            <div
-              class="product-image h-[380px] bg-[url('./imgs/featured-product-image-03.webp')] bg-cover bg-no-repeat bg-center">
-              <!-- <a href="#"> -->
-              <div
-                class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group">
-                <div
-                  class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1">
-                  Add to cart
-                </div>
-              </div>
-              <!-- </a> -->
-            </div>
-            <div class="product-info my-8">
-              <a href="#">
-                <div class="product-name text-base mb-1 hover:text-pri">
-                  Coach slim easton black
-                </div>
-              </a>
-              <div class="product-price">
-                <span class="text-gray-800">$165.90</span>
-              </div>
-            </div>
-          </div>
-          <div class="item4 product-item">
-            <div
-              class="product-image h-[380px] bg-[url('./imgs/featured-product-image-04.webp')] bg-cover bg-no-repeat bg-center">
-              <!-- <a href="#"> -->
-              <div
-                class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group">
-                <div
-                  class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1">
-                  Add to cart
-                </div>
-              </div>
-              <!-- </a> -->
-            </div>
-            <div class="product-info my-8">
-              <a href="#">
-                <div class="product-name text-base mb-1 hover:text-pri">
-                  Frayed denim shorts
-                </div>
-              </a>
-              <div class="product-price">
-                <span class="text-gray-800">$75.00</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Our Blog -->
-      <div class="our-blog h-[100vh] pt-[94px] pb-[65px]">
-        <h3 class="title uppercase font-semibold text-center pb-[60px] leading-9 text-3xl">our blog</h3>
-        <div class="blog-list h-[495px] grid grid-cols-3 gap-7">
-          <div class="blog-item">
-            <div class="overflow-hidden">
-              <img src="./imgs/blog-image-01.jpg"
-                class="hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer" alt="">
-            </div>
-            <div class="body text-left py-3 px-1">
-              <h4 class="pb-2">
-                <a href="" class="text-base font-normal leading-6 hover:text-pri">
-                  Black Friday Guide: Best Sales & Discount Codes
-                </a>
-              </h4>
-              <p class="text-sm font-normal leading-6 text-gray-400">
-                By <span class="text-gray-500">Nancy Ward</span> on <span class="text-gray-500">July 22, 2017</span>
-              </p>
-              <p class="text-sm font-normal leading-6 text-gray-400 pt-4">
-                Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod.
-                Inter-dum et malesuada fames
-              </p>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="overflow-hidden">
-              <img src="./imgs/blog-image-02.jpg"
-                class="hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer" alt="">
-            </div>
-            <div class="body text-left py-3 px-1">
-              <h4 class="pb-2">
-                <a href="" class="text-base font-normal leading-6 hover:text-pri">
-                  Black Friday Guide: Best Sales & Discount Codes
-                </a>
-              </h4>
-              <p class="text-sm font-normal leading-6 text-gray-400">
-                By <span class="text-gray-500">Nancy Ward</span> on <span class="text-gray-500">July 22, 2017</span>
-              </p>
-              <p class="text-sm font-normal leading-6 text-gray-400 pt-4">
-                Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod.
-                Inter-dum et malesuada fames
-              </p>
-            </div>
-          </div>
-          <div class="blog-item">
-            <div class="overflow-hidden">
-              <img src="./imgs/blog-image-03.webp"
-                class="hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer" alt="">
-            </div>
-            <div class="body text-left py-3 px-1">
-              <h4 class="pb-2">
-                <a href="" class="text-base font-normal leading-6 hover:text-pri">
-                  Black Friday Guide: Best Sales & Discount Codes
-                </a>
-              </h4>
-              <p class="text-sm font-normal leading-6 text-gray-400">
-                By <span class="text-gray-500">Nancy Ward</span> on <span class="text-gray-500">July 22, 2017</span>
-              </p>
-              <p class="text-sm font-normal leading-6 text-gray-400 pt-4">
-                Duis ut velit gravida nibh bibendum commodo. Sus-pendisse pellentesque mattis augue id euismod.
-                Inter-dum et malesuada fames
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Follow us -->
-      <div class="follow-us pt-5">
-        <h3 class="title uppercase font-semibold text-center pb-[60px] leading-9 text-3xl">@ FOLLOW US ON INSTAGRAM</h3>
-        <div class="follow-list flex w-[100vw] h-[300px] relative left-[calc(-50vw_+_50%)]">
-          <!-- item 1 -->
-          <div
-            class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-01.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden">
-            <div class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out">
-            </div>
-            <div
-              class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center text-sm">
-              <span class="material-symbols-outlined">
-                favorite
-              </span>
-              <span class="ml-2">
-                39
-              </span>
-            </div>
-            <div
-              class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out">
-              <p class="text-gray-300 mb-4">Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu
-                viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam
-                eget metus elit.
-              </p>
-              <span class="text-gray-300">Photo by @huthoine</span>
-            </div>
-          </div>
-          <!-- item 2 -->
-          <div
-            class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-02.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden">
-            <div class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out">
-            </div>
-            <div
-              class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center">
-              <span class="material-symbols-outlined">
-                favorite
-              </span>
-              <span class="ml-2">
-                39
-              </span>
-            </div>
-            <div
-              class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out">
-              <p class="text-gray-300 mb-4">Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu
-                viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam
-                eget metus elit.
-              </p>
-              <span class="text-gray-300">Photo by @huthoine</span>
-            </div>
-          </div>
-          <!-- item 3 -->
-          <div
-            class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-03.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden">
-            <div class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out">
-            </div>
-            <div
-              class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center">
-              <span class="material-symbols-outlined">
-                favorite
-              </span>
-              <span class="ml-2">
-                39
-              </span>
-            </div>
-            <div
-              class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out">
-              <p class="text-gray-300 mb-4">Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu
-                viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam
-                eget metus elit.
-              </p>
-              <span class="text-gray-300">Photo by @huthoine</span>
-            </div>
-          </div>
-          <!-- item 4 -->
-          <div
-            class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-04.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden">
-            <div class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out">
-            </div>
-            <div
-              class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center">
-              <span class="material-symbols-outlined">
-                favorite
-              </span>
-              <span class="ml-2">
-                39
-              </span>
-            </div>
-            <div
-              class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out">
-              <p class="text-gray-300 mb-4">Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu
-                viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam
-                eget metus elit.
-              </p>
-              <span class="text-gray-300">Photo by @huthoine</span>
-            </div>
-          </div>
-          <!-- item 5 -->
-          <div
-            class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-05.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden">
-            <div class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out">
-            </div>
-            <div
-              class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center">
-              <span class="material-symbols-outlined">
-                favorite
-              </span>
-              <span class="ml-2">
-                39
-              </span>
-            </div>
-            <div
-              class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out">
-              <p class="text-gray-300 mb-4">Nullam scelerisque, lacus sed consequat laoreet, dui enim iaculis leo, eu
-                viverra ex nulla in tellus. Nullam nec ornare tellus, ac fringilla lacus. Ut sit amet enim orci. Nam
-                eget metus elit.
-              </p>
-              <span class="text-gray-300">Photo by @huthoine</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Site footer -->
-    <footer class="site-footer p-11 flex flex-col items-center">
-      <div class="container">
-        <div class="row flex p-11">
-          <div class="w-[40%]">
-            <h6>About</h6>
-            <p class="pr-5">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the upcoming
-              programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code
-              wants to be simple. We will help programmers build up concepts in different programming languages that
-              include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
-          </div>
+            <div class="subtotal cf h-[25%]">
+              <ul>
+                <li class="totalRow">
+                  <span class="label">Subtotal</span
+                  ><span class="value">$35.00</span>
+                </li>
 
-          <div class="w-[30%]">
-            <h6>Categories</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-              <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-              <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-              <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-              <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-              <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-            </ul>
-          </div>
+                <li class="totalRow">
+                  <span class="label">Shipping</span
+                  ><span class="value">$5.00</span>
+                </li>
 
-          <div class="w-[30%]">
-            <h6>Quick Links</h6>
-            <ul class="footer-links">
-              <li><a href="http://scanfcode.com/about/">About Us</a></li>
-              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-            </ul>
+                <li class="totalRow">
+                  <span class="label">Tax</span><span class="value">$4.00</span>
+                </li>
+                <li class="totalRow final">
+                  <span class="label">Total</span
+                  ><span class="value">$44.00</span>
+                </li>
+                <li class="totalRow">
+                  <a href="#" class="btn continue">Checkout</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <hr>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-              <a href="#">Scanfcode</a>.
+      <!-- banner -->
+      <div
+        class="banner max-w-full h-[45px] leading-[45px] text-center bg-gray-200"
+      >
+        Free shipping for standard order over $100
+      </div>
+      <!-- header -->
+      <header
+        class="w-full h-[80px] flex justify-around items-center transition-all duration-300 bg-white z-50"
+      >
+        <div class="logo">
+          <img src="./imgs/logo.png" alt="" />
+        </div>
+        <ul
+          class="flex list-none font-Montserrat font-normal text-[15px] leading-[26px]"
+        >
+          <li class="is-active"><a href="">Home</a></li>
+          <li><a href="./html/product.html">Product</a></li>
+          <li><a href="./html/blog.html">Blog</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="action flex items-center">
+          <div class="user icon">
+            <a href="./html/form.html" class="">
+              <span class="material-symbols-outlined"> person </span>
+            </a>
+          </div>
+          <div class="line w-[1px] h-4 mx-4 bg-gray-400"></div>
+          <div id="cart-icon" class="icon relative">
+            <a href="" class="">
+              <span class="material-symbols-outlined"> shopping_cart </span>
+            </a>
+            <div
+              class="cart-noti w-4 h-4 rounded-full absolute -top-2 -right-2 bg-pri hidden justify-center items-center"
+            >
+              <p class="text-[10px] text-white"></p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div id="slider" class="slider">
+        <div
+          class="slider-wrap flex justify-center flex-col max-w-[640px] absolute top-1/2 right-1/2 translate-y-[-50%] overflow-hidden"
+        >
+          <h3 class="text-6xl tracking-wide is-fadeIn text-white">
+            <span class="text-white font-extrabold uppercase">
+              This is title
+            </span>
+          </h3>
+          <p
+            class="mt-4 mb-9 is-fadeRight font-normal leading-6 text-white text-base"
+          >
+            <span class=""></span>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
+            architecto aperiam minus possimus minima.
+          </p>
+          <a
+            href="./html/product.html"
+            class="w-fit px-6 py-2 bg-pri text-white rounded-sm is-fadeUp"
+            >Shopping now</a
+          >
+          `;
+        </div>
+      </div>
+      <!-- content -->
+      <div id="content" class="max-w-screen-xl mx-auto">
+        <!-- Category -->
+        <div class="cate-wrap grid grid-cols-3 h-[1000px] gap-7 py-10">
+          <div class="item1 cate-item row-span-5">
+            <img src="./imgs/category-image-01.jpg" alt="" class="ct-image" />
+            <a href="" class="cate-btn">Dresses</a>
+          </div>
+          <div class="item2 cate-item col-start-2 row-start-1 row-span-4">
+            <img src="./imgs/category-image-02.jpg" alt="" class="ct-image" />
+            <a href="" class="cate-btn">Watches</a>
+          </div>
+          <div class="item3 cate-item row-span-5">
+            <img src="./imgs/category-image-03.jpg" alt="" class="ct-image" />
+            <a href="" class="cate-btn">Bags</a>
+          </div>
+          <div class="item4 cate-item row-span-5">
+            <img src="./imgs/category-image-04.jpg" alt="" class="ct-image" />
+            <a href="" class="cate-btn">Sunglasses</a>
+          </div>
+          <div class="item5 cate-item row-start-5 col-start-2 row-span-6">
+            <img src="./imgs/category-image-05.jpg" alt="" class="ct-image" />
+            <a href="" class="cate-btn">Footerwear</a>
+          </div>
+          <div
+            class="item6 cate-item row-span-5 flex justify-center items-center flex-col bg-[url('./imgs/category-image-06.webp')] bg-cover bg-no-repeat h-full px-[60px]"
+          >
+            <h3
+              class="text-3xl uppercase text-gray-900 leading-9 font-medium text-center pb-2"
+            >
+              SIGN UP & GET 20% OFF
+            </h3>
+            <p
+              class="text-base text-gray-400 leading-6 font-normal text-center"
+            >
+              Be the frist to know about the latest fashion news and get
+              exclu-sive offers
             </p>
+            <a
+              href="./html/form.html"
+              class="ct-button text-base px-14 py-2 mt-6"
+              >sign up</a
+            >
           </div>
-
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
+        </div>
+        <!-- Feature Product -->
+        <div class="featured-products pt-[45px] pb-[105px]">
+          <h3
+            class="title uppercase font-semibold text-center pb-[60px] leading-9 text-3xl"
+          >
+            feature products
+          </h3>
+          <div class="product-list grid grid-cols-4 gap-7">
+            <div class="item1 product-item">
+              <div
+                style="
+                  background-image: url('./imgs/featured-product-image-01.jpg');
+                "
+                class="product-image h-[380px] bg-cover bg-no-repeat bg-center"
+              >
+                <!-- <a href="#"> -->
+                <div
+                  class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group"
+                >
+                  <div
+                    class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1"
+                  >
+                    Add to cart
+                  </div>
+                </div>
+                <!-- </a> -->
+              </div>
+              <div class="product-info my-8">
+                <a href="#">
+                  <div class="product-name text-base mb-1 hover:text-pri">
+                    Herschel supply co 25l
+                  </div>
+                </a>
+                <div class="product-price">
+                  <span class="text-gray-800">$75.00</span>
+                </div>
+              </div>
+            </div>
+            <div class="item2 product-item">
+              <div
+                style="background-image: url('./imgs/category-image-02.jpg')"
+                class="product-image h-[380px] bg-cover bg-no-repeat bg-center"
+              >
+                <!-- <a href="#"> -->
+                <div
+                  class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group"
+                >
+                  <div
+                    class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1"
+                  >
+                    Add to cart
+                  </div>
+                </div>
+                <!-- </a> -->
+              </div>
+              <div class="product-info my-8">
+                <a href="#">
+                  <div class="product-name text-base mb-1 hover:text-pri">
+                    Denim jacket blue
+                  </div>
+                </a>
+                <div class="product-price">
+                  <span class="text-gray-800">$92.50</span>
+                </div>
+              </div>
+            </div>
+            <div class="item3 product-item">
+              <div
+                style="
+                  background-image: url('./imgs/featured-product-image-03.webp');
+                "
+                class="product-image h-[380px] bg-cover bg-no-repeat bg-center"
+              >
+                <!-- <a href="#"> -->
+                <div
+                  class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group"
+                >
+                  <div
+                    class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1"
+                  >
+                    Add to cart
+                  </div>
+                </div>
+                <!-- </a> -->
+              </div>
+              <div class="product-info my-8">
+                <a href="#">
+                  <div class="product-name text-base mb-1 hover:text-pri">
+                    Coach slim easton black
+                  </div>
+                </a>
+                <div class="product-price">
+                  <span class="text-gray-800">$165.90</span>
+                </div>
+              </div>
+            </div>
+            <div class="item4 product-item">
+              <div
+                style="
+                  background-image: url('./imgs/featured-product-image-01.jpg');
+                "
+                class="product-image h-[380px] bg-cover bg-no-repeat bg-center"
+              >
+                <!-- <a href="#"> -->
+                <div
+                  class="w-full h-full hover:bg-gray-900 hover:bg-opacity-20 hover:transition-all hover:ease-in-out hover:duration-300 relative overflow-hidden group"
+                >
+                  <div
+                    class="add-cart-btn absolute bottom-4 left-1/2 translate-x-[-50%] translate-y-[100%] opacity-0 text-sm ct-button px-6 py-1"
+                  >
+                    Add to cart
+                  </div>
+                </div>
+                <!-- </a> -->
+              </div>
+              <div class="product-info my-8">
+                <a href="#">
+                  <div class="product-name text-base mb-1 hover:text-pri">
+                    Frayed denim shorts
+                  </div>
+                </a>
+                <div class="product-price">
+                  <span class="text-gray-800">$75.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Our Blog -->
+        <div class="our-blog h-[100vh] pt-[94px] pb-[65px]">
+          <h3
+            class="title uppercase font-semibold text-center pb-[60px] leading-9 text-3xl"
+          >
+            our blog
+          </h3>
+          <div class="blog-list h-[495px] grid grid-cols-3 gap-7">
+            <div class="blog-item">
+              <div class="overflow-hidden">
+                <img
+                  src="./imgs/blog-image-01.jpg"
+                  class="hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer"
+                  alt=""
+                />
+              </div>
+              <div class="body text-left py-3 px-1">
+                <h4 class="pb-2">
+                  <a
+                    href=""
+                    class="text-base font-normal leading-6 hover:text-pri"
+                  >
+                    Black Friday Guide: Best Sales & Discount Codes
+                  </a>
+                </h4>
+                <p class="text-sm font-normal leading-6 text-gray-400">
+                  By <span class="text-gray-500">Nancy Ward</span> on
+                  <span class="text-gray-500">July 22, 2017</span>
+                </p>
+                <p class="text-sm font-normal leading-6 text-gray-400 pt-4">
+                  Duis ut velit gravida nibh bibendum commodo. Sus-pendisse
+                  pellentesque mattis augue id euismod. Inter-dum et malesuada
+                  fames
+                </p>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="overflow-hidden">
+                <img
+                  src="./imgs/blog-image-02.jpg"
+                  class="hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer"
+                  alt=""
+                />
+              </div>
+              <div class="body text-left py-3 px-1">
+                <h4 class="pb-2">
+                  <a
+                    href=""
+                    class="text-base font-normal leading-6 hover:text-pri"
+                  >
+                    Black Friday Guide: Best Sales & Discount Codes
+                  </a>
+                </h4>
+                <p class="text-sm font-normal leading-6 text-gray-400">
+                  By <span class="text-gray-500">Nancy Ward</span> on
+                  <span class="text-gray-500">July 22, 2017</span>
+                </p>
+                <p class="text-sm font-normal leading-6 text-gray-400 pt-4">
+                  Duis ut velit gravida nibh bibendum commodo. Sus-pendisse
+                  pellentesque mattis augue id euismod. Inter-dum et malesuada
+                  fames
+                </p>
+              </div>
+            </div>
+            <div class="blog-item">
+              <div class="overflow-hidden">
+                <img
+                  src="./imgs/blog-image-03.webp"
+                  class="hover:scale-125 transition-all duration-300 ease-in-out cursor-pointer"
+                  alt=""
+                />
+              </div>
+              <div class="body text-left py-3 px-1">
+                <h4 class="pb-2">
+                  <a
+                    href=""
+                    class="text-base font-normal leading-6 hover:text-pri"
+                  >
+                    Black Friday Guide: Best Sales & Discount Codes
+                  </a>
+                </h4>
+                <p class="text-sm font-normal leading-6 text-gray-400">
+                  By <span class="text-gray-500">Nancy Ward</span> on
+                  <span class="text-gray-500">July 22, 2017</span>
+                </p>
+                <p class="text-sm font-normal leading-6 text-gray-400 pt-4">
+                  Duis ut velit gravida nibh bibendum commodo. Sus-pendisse
+                  pellentesque mattis augue id euismod. Inter-dum et malesuada
+                  fames
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Follow us -->
+        <div class="follow-us pt-5">
+          <h3
+            class="title uppercase font-semibold text-center pb-[60px] leading-9 text-3xl"
+          >
+            @ FOLLOW US ON INSTAGRAM
+          </h3>
+          <div
+            class="follow-list flex w-[100vw] h-[300px] relative left-[calc(-50vw_+_50%)]"
+          >
+            <!-- item 1 -->
+            <div
+              class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-01.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden"
+            >
+              <div
+                class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out"
+              ></div>
+              <div
+                class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center text-sm"
+              >
+                <span class="material-symbols-outlined"> favorite </span>
+                <span class="ml-2"> 39 </span>
+              </div>
+              <div
+                class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out"
+              >
+                <p class="text-gray-300 mb-4">
+                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                  metus elit.
+                </p>
+                <span class="text-gray-300">Photo by @huthoine</span>
+              </div>
+            </div>
+            <!-- item 2 -->
+            <div
+              class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-02.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden"
+            >
+              <div
+                class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out"
+              ></div>
+              <div
+                class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center"
+              >
+                <span class="material-symbols-outlined"> favorite </span>
+                <span class="ml-2"> 39 </span>
+              </div>
+              <div
+                class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out"
+              >
+                <p class="text-gray-300 mb-4">
+                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                  metus elit.
+                </p>
+                <span class="text-gray-300">Photo by @huthoine</span>
+              </div>
+            </div>
+            <!-- item 3 -->
+            <div
+              class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-03.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden"
+            >
+              <div
+                class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out"
+              ></div>
+              <div
+                class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center"
+              >
+                <span class="material-symbols-outlined"> favorite </span>
+                <span class="ml-2"> 39 </span>
+              </div>
+              <div
+                class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out"
+              >
+                <p class="text-gray-300 mb-4">
+                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                  metus elit.
+                </p>
+                <span class="text-gray-300">Photo by @huthoine</span>
+              </div>
+            </div>
+            <!-- item 4 -->
+            <div
+              class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-04.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden"
+            >
+              <div
+                class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out"
+              ></div>
+              <div
+                class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center"
+              >
+                <span class="material-symbols-outlined"> favorite </span>
+                <span class="ml-2"> 39 </span>
+              </div>
+              <div
+                class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out"
+              >
+                <p class="text-gray-300 mb-4">
+                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                  metus elit.
+                </p>
+                <span class="text-gray-300">Photo by @huthoine</span>
+              </div>
+            </div>
+            <!-- item 5 -->
+            <div
+              class="follow-item relative w-[20%] h-full bg-[url('./imgs/follow-image-05.jpg')] bg-cover bg-no-repeat cursor-pointer overflow-hidden"
+            >
+              <div
+                class="blur absolute inset-0 scale-125 bg-black opacity-0 transition-all duration-300 ease-in-out"
+              ></div>
+              <div
+                class="favorite pl-8 pt-7 text-gray-300 transition-all duration-300 ease-in-out -translate-x-[150%] -translate-y-[150%] flex items-center"
+              >
+                <span class="material-symbols-outlined"> favorite </span>
+                <span class="ml-2"> 39 </span>
+              </div>
+              <div
+                class="content text-sm absolute left-0 right-0 bottom-0 translate-y-[150%] pl-10 pr-6 pb-8 transition-all duration-300 ease-in-out"
+              >
+                <p class="text-gray-300 mb-4">
+                  Nullam scelerisque, lacus sed consequat laoreet, dui enim
+                  iaculis leo, eu viverra ex nulla in tellus. Nullam nec ornare
+                  tellus, ac fringilla lacus. Ut sit amet enim orci. Nam eget
+                  metus elit.
+                </p>
+                <span class="text-gray-300">Photo by @huthoine</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
-  </div>
-  <script>
-    const $ = document.querySelector.bind(document);
-    const $$ = document.querySelectorAll.bind(document);
-    const loading = $("#loading");
-    const header = $("header");
-    const banner = $(".banner");
-    window.addEventListener("load", () => {
-      loading.style.display = "none";
-      document.body.style = "overflow:auto; height:auto; position:relative";
+      <!-- Site footer -->
+      <footer class="site-footer p-11 flex flex-col items-center">
+        <div class="container">
+          <div class="row flex p-11">
+            <div class="w-[40%]">
+              <h6>About</h6>
+              <p class="pr-5">
+                Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative
+                to help the upcoming programmers with the code. Scanfcode
+                focuses on providing the most efficient code or snippets as the
+                code wants to be simple. We will help programmers build up
+                concepts in different programming languages that include C, C++,
+                Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and
+                Algorithm.
+              </p>
+            </div>
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > banner.offsetHeight) {
-          document.body.style.paddingTop = `${header.offsetHeight}px`;
-          header.classList.add("is-fixed");
-        } else {
-          header.classList.remove("is-fixed");
-          document.body.style.paddingTop = 0;
-        }
+            <div class="w-[30%]">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li>
+                  <a href="http://scanfcode.com/category/c-language/">C</a>
+                </li>
+                <li>
+                  <a href="http://scanfcode.com/category/front-end-development/"
+                    >UI Design</a
+                  >
+                </li>
+                <li>
+                  <a href="http://scanfcode.com/category/back-end-development/"
+                    >PHP</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="http://scanfcode.com/category/java-programming-language/"
+                    >Java</a
+                  >
+                </li>
+                <li>
+                  <a href="http://scanfcode.com/category/android/">Android</a>
+                </li>
+                <li>
+                  <a href="http://scanfcode.com/category/templates/"
+                    >Templates</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-[30%]">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/about/">About Us</a></li>
+                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                <li>
+                  <a href="http://scanfcode.com/contribute-at-scanfcode/"
+                    >Contribute</a
+                  >
+                </li>
+                <li>
+                  <a href="http://scanfcode.com/privacy-policy/"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">
+                Copyright &copy; 2017 All Rights Reserved by
+                <a href="#">Scanfcode</a>.
+              </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li>
+                  <a class="facebook" href="#"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a class="dribbble" href="#"
+                    ><i class="fa fa-dribbble"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="linkedin" href="#"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const $ = document.querySelector.bind(document);
+      const $$ = document.querySelectorAll.bind(document);
+      const loading = $("#loading");
+      const header = $("header");
+      const banner = $(".banner");
+      window.addEventListener("load", () => {
+        loading.style.display = "none";
+        document.body.style = "overflow:auto; height:auto; position:relative";
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > banner.offsetHeight) {
+            document.body.style.paddingTop = `${header.offsetHeight}px`;
+            header.classList.add("is-fixed");
+          } else {
+            header.classList.remove("is-fixed");
+            document.body.style.paddingTop = 0;
+          }
+        });
       });
-    });
-  </script>
-  <script src="./js/slider.js"></script>
-  <script src="./js/cart.js"></script>
-</body>
-
+    </script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/cart.js"></script>
+  </body>
 </html>

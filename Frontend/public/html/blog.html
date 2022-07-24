@@ -6,13 +6,14 @@
     <link href="../output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/loading.css" />
     <link rel="stylesheet" href="../css/cart.css" />
-    <link rel="stylesheet" href="../css/product.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
     <link rel="stylesheet" href="../output.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
     <style>
+      
     </style>
   </head>
   <body>
@@ -88,8 +89,8 @@
           class="flex list-none font-Montserrat font-normal text-[15px] leading-[26px]"
         >
           <li><a href="../index.html">Home</a></li>
-          <li class="is-active"><a href="">Product</a></li>
-          <li><a href="../html/blog.html">Blog</a></li>
+          <li><a href="../html/product.html">Product</a></li>
+          <li class="is-active"><a href="#">Blog</a></li>
           <li><a href="">About</a></li>
           <li><a href="">Contact</a></li>
         </ul>
@@ -112,74 +113,55 @@
           </div>
         </div>
       </header>
-      <content>
-        <div class="h-[1000px] w-full flex justify-center gap-4">
-          <aside class="w-[15%] h-full capitalize p-4">
-            <div class="categories pb-12">
-              <h3 class="title pb-2 font-bold text-lg leading-7 text-gray-800">
+      <!-- Content -->
+      <content class="pt-16">
+        <div class="wrap max-w-screen-xl mx-auto flex justify-between">
+          <!-- Blog list -->
+          <div class="blog-list w-[70%]">
+            <!-- Blog item -->
+          </div>
+
+          <aside class="w-[25%]">
+            <!-- Categories -->
+            <div class="categories">
+              <h3
+                class="title pb-8 pt-14 font-extrabold text-2xl text-lg leading-7 text-gray-800 capitalize"
+              >
                 categories
               </h3>
               <ul>
-                <li>All</li>
-                <li>Women</li>
-                <li>Men</li>
-                <li>Kids</li>
-                <li>Accessories</li>
+                <li>Fashion</li>
+                <li>Beaty</li>
+                <li>Street Style</li>
+                <li>Life Style</li>
+                <li>DIY & Crafts</li>
               </ul>
             </div>
-            <div class="filter">
-              <h3 class="title pb-2 font-bold text-lg leading-7 text-gray-800">
-                filters
+            <!-- Featured products -->
+            <div class="featured-products">
+              <h3
+                class="title pb-8 pt-14 font-extrabold text-2xl text-lg leading-7 text-gray-800 capitalize"
+              >
+                Featured Products
               </h3>
-              <div class="price-range border-t border-t-gray-200 pt-5 pb-12">
-                <h3
-                  class="title pb-2 font-semibold text-base leading-7 text-gray-600"
-                >
-                  Price
-                </h3>
-                <div class="filter-wrap">
-                  <div class="filter-range-wrapper">
-                    <div class="filter-range">
-                      <div class="filter-range-scale">
-                        <div class="filter-range-bar"></div>
-                      </div>
-                      <button class="filter-range-handle min"></button>
-                      <button class="filter-range-handle max"></button>
-                    </div>
-                  </div>
-
-                  <div class="filter-interval">
-                    <label
-                      >from <input type="text" name="min-interval" value="0"
-                    /></label>
-                    <label
-                      >to <input type="text" name="max-interval" value="15000"
-                    /></label>
-                  </div>
-                </div>
+              <div class="featured-product-list"></div>
+            </div>
+            <!-- Tags -->
+            <div class="tags">
+              <h3
+                class="title pb-4 pt-14 font-extrabold text-2xl text-lg leading-7 text-gray-800 capitalize"
+              >
+                Tags
+              </h3>
+              <div class="tag-list flex flex-wrap gap-1">
+                <span>Fashion</span>
+                <span>LifeStyle</span>
+                <span>Denim</span>
+                <span>StreetStyle</span>
+                <span>Crafts</span>
               </div>
-              <div class="color border-t border-t-gray-200 pt-5 pb-12">
-                <h3
-                  class="title pb-2 font-semibold text-base leading-7 text-gray-600"
-                >
-                  Color
-                </h3>
-                <div class="flex gap-1">
-                  <span class="w-6 h-6 rounded-full bg-[#00BBEC]"></span>
-                  <span class="w-6 h-6 rounded-full bg-[#2C6ED5]"></span>
-                  <span class="w-6 h-6 rounded-full bg-[#FFA037]"></span>
-                  <span class="w-6 h-6 rounded-full bg-[#FF5337]"></span>
-                  <span class="w-6 h-6 rounded-full bg-[#A88C77]"></span>
-                  <span class="w-6 h-6 rounded-full bg-[#393939]"></span>
-                  <span class="w-6 h-6 rounded-full bg-[#CCCCCC]"></span>
-                </div>
-              </div>
-              <button class="ct-button px-4 py-1">filter</button>
             </div>
           </aside>
-          <div class="product-wrap w-[75%] h-full flex">
-            <div class="product-list w-full flex flex-wrap gap-6 p-4"></div>
-          </div>
         </div>
       </content>
       <footer></footer>
@@ -204,7 +186,7 @@
         }
       });
     </script>
-    <script src="../js/render.js"></script>
     <script src="../js/cart.js"></script>
+    <script src="../js/blogrender.js"></script>
   </body>
 </html>

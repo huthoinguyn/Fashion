@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
         <img
           src="${img}"
           alt=""
-          class="itemImg"
+          class="itemImg w-[128px] h-[100px] object-cover"
         />
         <p class="itemNumber">#QUE-007544-002</p>
         <h3>${name}</h3>
@@ -47,14 +47,17 @@ window.addEventListener("load", () => {
       `;
     $(".cartWrap").insertAdjacentHTML("beforeend", cartTemplate);
   }
-  const productItems = $$(".featured-products .product-item");
+  const productItems = $$(".product-item");
   productItems.forEach((item) => {
     const name = item.querySelector(".product-name").textContent,
+      image = item.querySelector(".product-image"),
       price = item.querySelector(".product-price span").textContent,
       addCartBtn = item.querySelector(".add-cart-btn");
+    const style = window.getComputedStyle(image, false);
+    const bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
     addCartBtn.addEventListener("click", () => {
-      addToCart("", name, price);
-      renderCart("", name, price);
+      addToCart(bi, name, price);
+      renderCart(bi, name, price);
       setProductTotal();
       delProdCart();
     });

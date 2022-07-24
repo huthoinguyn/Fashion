@@ -29,7 +29,7 @@ header .action .icon span {
 }
 
 .is-active {
-  @apply relative after:absolute after:bottom-0 after:left-0 after:bg-pri after:rounded-md after:z-50 after:h-0.5 after:w-full;
+  @apply relative after:absolute after:bottom-0 after:left-0 after:bg-pri after:rounded-md after:z-30 after:h-0.5 after:w-full;
 }
 
 .is-fadeUp {
@@ -46,7 +46,7 @@ header .action .icon span {
   @apply relative overflow-hidden;
 }
 
-.cate-image {
+.ct-image {
   @apply w-full h-full object-cover hover:scale-125 transition-all duration-1000 cursor-pointer;
 }
 
@@ -72,4 +72,8 @@ header .action .icon span {
 
 .follow-item:hover .favorite {
   @apply translate-x-0 translate-y-0;
+}
+
+.title {
+  @apply hover:text-pri cursor-pointer;
 }
