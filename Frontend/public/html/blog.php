@@ -99,7 +99,7 @@
     </header>
     <!-- Content -->
     <content class="pt-16">
-      <div class="wrap max-w-screen-xl mx-auto flex justify-between justify-between">
+      <div class="wrap max-w-screen-xl mx-auto flex justify-between">
         <!-- Blog list -->
         <div class="blog-list w-[70%]">
           <!-- Blog item -->
@@ -108,7 +108,7 @@
         <aside class="w-[25%]">
           <!-- Categories -->
           <div class="categories">
-            <h3 class="title pb-8 pt-14 font-extrabold text-2xl text-lg leading-7 text-gray-800 capitalize">
+            <h3 class="title pb-8 pt-14 font-extrabold text-2xl leading-7 text-gray-800 capitalize">
               categories
             </h3>
             <ul>
@@ -121,14 +121,14 @@
           </div>
           <!-- Featured products -->
           <div class="featured-products">
-            <h3 class="title pb-8 pt-14 font-extrabold text-2xl text-lg leading-7 text-gray-800 capitalize">
+            <h3 class="title pb-8 pt-14 font-extrabold text-2xl leading-7 text-gray-800 capitalize">
               Featured Products
             </h3>
             <div class="featured-product-list"></div>
           </div>
           <!-- Tags -->
           <div class="tags">
-            <h3 class="title pb-4 pt-14 font-extrabold text-2xl text-lg leading-7 text-gray-800 capitalize">
+            <h3 class="title pb-4 pt-14 font-extrabold text-2xl leading-7 text-gray-800 capitalize">
               Tags
             </h3>
             <div class="tag-list flex flex-wrap gap-1">
