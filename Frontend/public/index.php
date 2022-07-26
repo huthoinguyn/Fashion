@@ -1,20 +1,55 @@
-<?php
-include("./data.php")
-?>
+<!DOCTYPE html>
+<html>
 
-<script>
-    var ajax = new XMLHttpRequest();
-    var method = "GET";
-    var url = "data.php";
-    var async = true;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link href="./output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/loading.css" />
+  <link rel="stylesheet" href="./css/cart.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <style></style>
+</head>
 
-    ajax.open(method, url, async);
+<body>
+  <?php
+  include('./pages/element/loading.php')
+  ?>
+  <div id="root" class="max-w-screen-2xl w-full mx-auto overflow-hidden">
+    <?php
+    include('./pages/element/banner.php');
+    include('./pages/element/header.php');
+    include('./pages/element/cart.php');
+    include('./pages/element/slider.php');
+    include('./pages/element/content.php');
+    include('./pages/element/footer.php');
+    ?>
+  </div>
+  <script>
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+    const loading = $("#loading");
+    const header = $("header");
+    const banner = $(".banner");
+    window.addEventListener("load", () => {
+      loading.style.display = "none";
+      document.body.style = "overflow:auto; height:auto; position:relative";
 
-    ajax.send();
-
-    ajax.onreadystatechange = function() {
-        if (this.readyState == 4 && status == 200) {
-            var data = JSON.parse(this.responseText);
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > banner.offsetHeight) {
+          document.body.style.paddingTop = `${header.offsetHeight}px`;
+          header.classList.add("is-fixed");
+        } else {
+          header.classList.remove("is-fixed");
+          document.body.style.paddingTop = 0;
         }
-    };
-</script>
+      });
+    });
+  </script>
+  <script src="./js/slider.js"></script>
+  <script src="./js/cart.js"></script>
+</body>
+
+</html>

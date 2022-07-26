@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="../output.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/loading.css" />
     <link rel="stylesheet" href="../css/cart.css" />
@@ -12,9 +19,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <style>
-    </style>
+    <style></style>
   </head>
+
   <body>
     <div id="loading">
       <div class="blur"></div>
@@ -87,15 +94,15 @@
         <ul
           class="flex list-none font-Montserrat font-normal text-[15px] leading-[26px]"
         >
-          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.php">Home</a></li>
           <li class="is-active"><a href="">Product</a></li>
-          <li><a href="../html/blog.html">Blog</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="../html/blog.php">Blog</a></li>
+          <li><a href="../html/about.php">About</a></li>
+          <li><a href="../html/contact.php">Contact</a></li>
         </ul>
         <div class="action flex items-center">
           <div class="user icon">
-            <a href="./html/form.html" class="">
+            <a href="./form.php" class="">
               <span class="material-symbols-outlined"> person </span>
             </a>
           </div>
@@ -113,7 +120,7 @@
         </div>
       </header>
       <content>
-        <div class="h-[1000px] w-full flex justify-center gap-4">
+        <div class="w-full flex justify-center gap-4 pt-12 pb-8">
           <aside class="w-[15%] h-full capitalize p-4">
             <div class="categories pb-12">
               <h3 class="title pb-2 font-bold text-lg leading-7 text-gray-800">
@@ -178,11 +185,94 @@
             </div>
           </aside>
           <div class="product-wrap w-[75%] h-full flex">
+            <!-- Product-List -->
             <div class="product-list w-full flex flex-wrap gap-6 p-4"></div>
+            <!-- Product-Render -->
           </div>
         </div>
       </content>
-      <footer></footer>
+      <!-- Footer -->
+      <footer
+        class="flex p-11 gap-7 text-gray-400 bg-gray-100 text-sm font-normal leading-6"
+      >
+        <!-- Get in touch -->
+        <div class="getintouch w-[40%] pt-8 px-4">
+          <h3
+            class="uppercase text-base leading-6 font-bold pb-8 text-gray-900"
+          >
+            GET IN TOUCH
+          </h3>
+          <p class="">
+            Any questions? Let us know in store at 8th floor, 379 Hudson St, New
+            York, NY 10018 or call us on (+1) 96 716 6879
+          </p>
+          <div class="social-media">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href=""><i class="fa-brands fa-snapchat"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <!-- Categories -->
+        <div class="categories w-[10%] pt-8 px-4">
+          <h3
+            class="uppercase text-base leading-6 font-bold pb-8 text-gray-900"
+          >
+            CATEGORIES
+          </h3>
+          <ul class="">
+            <li>Men</li>
+            <li>Women</li>
+            <li>Dresses</li>
+            <li>Sunglasses</li>
+          </ul>
+        </div>
+        <!-- Link -->
+        <div class="Link w-[10%] pt-8 px-4">
+          <h3
+            class="uppercase text-base leading-6 font-bold pb-8 text-gray-900"
+          >
+            LINKS
+          </h3>
+          <ul>
+            <li>Search</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Returns</li>
+          </ul>
+        </div>
+        <!-- Help -->
+        <div class="Help w-[10%] pt-8 px-4">
+          <h3
+            class="uppercase text-base leading-6 font-bold pb-8 text-gray-900"
+          >
+            HELP
+          </h3>
+          <ul>
+            <li>Track Order</li>
+            <li>Returns</li>
+            <li>Shipping</li>
+            <li>FAQs</li>
+          </ul>
+        </div>
+        <!-- Newletter -->
+        <div class="Newletter w-[30%] pt-8 px-4">
+          <h3
+            class="uppercase text-base leading-6 font-bold pb-8 text-gray-900"
+          >
+            NEWSLETTER
+          </h3>
+          <div class="subcribe flex flex-col">
+            <input
+              type="email"
+              placeholder="email@example.com"
+              class="border-b outline-none p-2 bg-transparent border-gray-300 text-gray-800"
+            />
+            <button class="ct-button mt-5 px-4 py-2">Subcribe</button>
+          </div>
+        </div>
+      </footer>
     </div>
     <script>
       const $ = document.querySelector.bind(document);

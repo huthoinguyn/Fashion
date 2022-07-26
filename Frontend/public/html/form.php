@@ -64,7 +64,7 @@
         </div>
         <div class="overlay-container">
           <div class="close-icon">
-            <a href="../index.html">
+            <a href="../index.php">
               <i class="fa-solid fa-xmark"></i>
             </a>
           </div>

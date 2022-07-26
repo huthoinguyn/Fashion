@@ -20,6 +20,26 @@ window.addEventListener("load", () => {
       name: "Herschel supply co 25l",
       price: "$75.00",
     },
+    {
+      img: "../imgs/featured-product-image-04.webp",
+      name: "Herschel supply co 25l",
+      price: "$75.00",
+    },
+    {
+      img: "../imgs/featured-product-image-04.webp",
+      name: "Herschel supply co 25l",
+      price: "$75.00",
+    },
+    {
+      img: "../imgs/featured-product-image-04.webp",
+      name: "Herschel supply co 25l",
+      price: "$75.00",
+    },
+    {
+      img: "../imgs/featured-product-image-04.webp",
+      name: "Herschel supply co 25l",
+      price: "$75.00",
+    },
   ];
   productItems.map((item) => {
     const productTemplate = `

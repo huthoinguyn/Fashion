@@ -77,3 +77,23 @@ header .action .icon span {
 .title {
   @apply hover:text-pri cursor-pointer;
 }
+
+footer ul li {
+  @apply pb-2 cursor-pointer;
+}
+
+footer ul li:hover {
+  @apply text-pri;
+}
+
+footer .social-media {
+  @apply text-lg pt-8;
+}
+footer .social-media a {
+  @apply pr-4;
+}
+
+.form form input,
+.form form textarea {
+  @apply w-full border px-5 py-3 mb-5 text-sm outline-none placeholder:text-sm placeholder:text-gray-600;
+}
