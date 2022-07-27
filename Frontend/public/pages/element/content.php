@@ -30,7 +30,7 @@
                 Be the frist to know about the latest fashion news and get
                 exclu-sive offers
             </p>
-            <a href="./html/form.html" class="ct-button text-base px-14 py-2 mt-6">sign up</a>
+            <a href="./html/form.php" class="ct-button text-base px-14 py-2 mt-6">sign up</a>
         </div>
     </div>
     <!-- Feature Product -->
