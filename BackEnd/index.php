@@ -19,9 +19,11 @@
 <body>
     <?php
 
+    include("./admincp/config/config.php");
     include("./pages/element/nav.php");
     include("./pages/element/header.php");
     include("./pages/element/main.php");
+    // include("./pages/element/direction.php");
     include("./pages/element/footer.php");
 
     ?>

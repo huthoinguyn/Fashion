@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a href="#!">
+                    <a href="./admincp/module/productmanager">
                         <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                             <i class="indigo-text text-lighten-1 large material-icons">store</i>
                             <span class="indigo-text text-lighten-1">
