@@ -12,7 +12,11 @@
   <link rel="stylesheet" href="../output.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>Product</title>
-  <style></style>
+  <style>
+    #prod {
+      margin-top: 28px;
+    }
+  </style>
 </head>
 
 <body>
@@ -59,7 +63,7 @@
       <p class="text-lg leading-8">New Arrivals Women Collection 2022</p>
     </div>
     <!-- content -->
-    <content>
+    <div id="prod">
       <div class="w-full flex justify-center gap-4 pt-12 pb-8">
         <aside class="w-[15%] h-full capitalize p-4">
           <div class="categories pb-12">
@@ -67,11 +71,7 @@
               categories
             </h3>
             <ul>
-              <li>All</li>
-              <li>Women</li>
-              <li>Men</li>
-              <li>Kids</li>
-              <li>Accessories</li>
+              <?php include('./productcategory.php'); ?>
             </ul>
           </div>
           <div class="filter">
@@ -116,13 +116,9 @@
             <button class="ct-button px-4 py-1">filter</button>
           </div>
         </aside>
-        <div class="product-wrap w-[75%] h-full flex">
-          <!-- Product-List -->
-          <div class="product-list w-full flex flex-wrap gap-6 p-4"></div>
-          <!-- Product-Render -->
-        </div>
+        <?php include('../handle/renderprod.php'); ?>
       </div>
-    </content>
+    </div>
     <!-- Footer -->
     <?php include('../pages/element/footer.php') ?>
   </div>

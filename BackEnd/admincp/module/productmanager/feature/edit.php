@@ -17,8 +17,6 @@ $querry_edit = mysqli_query($conn, $sql_edit);
 </head>
 
 <body>
-
-
     <?php
     $i = 0;
     while ($editprod = mysqli_fetch_array($querry_edit)) {
@@ -30,12 +28,20 @@ $querry_edit = mysqli_query($conn, $sql_edit);
                 <input type="text" name="title" placeholder="Enter Title" value="<?php echo $editprod['name'] ?>" />
                 <input type="text" name="price" placeholder="Enter Price" value="<?php echo $editprod['price'] ?>" />
                 <select name="category">
+                    <?php
+                    $conn = mysqli_connect("localhost", "root", "", "fashion");
+                    $result = mysqli_query($conn, "SELECT * FROM categories ORDER BY sort ASC");
+                    ?>
                     <option selected value="<?php echo $editprod['category'] ?>">Category</option>
-                    <option value="Dresses">Dresses</option>
-                    <option value="Watches">Watches</option>
-                    <option value="Sunglasses">Sunglasses</option>
-                    <option value="Bags">Bags</option>
-                    <option value="Footerwear">Footerwear</option>
+
+                    <?php
+                    $i = 0;
+                    while ($row = mysqli_fetch_array($result)) {
+                        $i++;
+                    ?>
+                        <option <?php //if ($editprod['category'] == $row['category']) echo 'selected'  
+                                ?> value="<?php echo $row['category'] ?>"><?php echo $row['category'] ?></option>
+                    <?php } ?>
                 </select>
                 <div id="file-upload-form" class="uploader">
                     <h3>Upload Image</h3>

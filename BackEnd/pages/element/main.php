@@ -20,7 +20,7 @@
                     <div class="col s1">&nbsp;</div>
                     <div class="col s1">&nbsp;</div>
 
-                    <a href="#!">
+                    <a href="admincp/module/customermanager/customer.php">
                         <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                             <i class="indigo-text text-lighten-1 large material-icons">people</i>
                             <span class="indigo-text text-lighten-1">
@@ -107,7 +107,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <a href="#!">
+                    <a href="admincp/module/categorymanager/category.php">
                         <div style="padding: 30px;" class="grey lighten-3 col s5 waves-effect">
                             <i class="indigo-text text-lighten-1 large material-icons">view_list</i>
                             <span class="indigo-text text-lighten-1">

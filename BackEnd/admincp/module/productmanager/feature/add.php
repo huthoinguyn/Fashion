@@ -20,12 +20,18 @@
         <input type="text" name="title" placeholder="Enter Title" />
         <input type="text" name="price" placeholder="Enter Price" />
         <select name="category">
-            <option selected value="0">Category</option>
-            <option value="Dresses">Dresses</option>
-            <option value="Watches">Watches</option>
-            <option value="Sunglasses">Sunglasses</option>
-            <option value="Bags">Bags</option>
-            <option value="Footerwear">Footerwear</option>
+            <?php
+            $conn = mysqli_connect("localhost", "root", "", "fashion");
+            $result = mysqli_query($conn, "SELECT * FROM categories ORDER BY sort ASC");
+            ?>
+            <option selected value="category">Category</option>
+            <?php
+            $i = 0;
+            while ($row = mysqli_fetch_array($result)) {
+                $i++;
+            ?>
+                <option value="<?php echo $row['category'] ?>"><?php echo $row['category'] ?></option>
+            <?php } ?>
         </select>
         <div id="file-upload-form" class="uploader">
             <h3>Upload Image</h3>

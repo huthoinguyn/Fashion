@@ -15,4 +15,4 @@ if (isset($_POST['add'])) {
     mysqli_query($conn, $sql_add);
     header('Location: ../');
 }
-?> 
+?>
