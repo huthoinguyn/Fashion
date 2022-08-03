@@ -71,6 +71,7 @@
               categories
             </h3>
             <ul>
+              <li><a href="?#prod">All</a></li>
               <?php include('./productcategory.php'); ?>
             </ul>
           </div>
