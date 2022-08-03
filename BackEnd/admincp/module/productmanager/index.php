@@ -45,7 +45,7 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
       </div>
       <ul class="prodHead">
         <li class="stt"></li>
-        <li class="prodHeader prodSection">Product</li>
+        <li style="text-align: left;" class="prodHeader prodSection">Product</li>
         <!-- <li class="">Quantity</li> -->
         <li class="price">Price</li>
         <li style="align-items: unset;" class="removeWrap">More</li>

@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
   const ajax = new XMLHttpRequest();
-  ajax.open("GET", "prod.php", true);
+  ajax.open("GET", "proddb.php", true);
   ajax.send();
 
   ajax.onreadystatechange = function () {
