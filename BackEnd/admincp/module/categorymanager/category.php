@@ -45,7 +45,7 @@ $querry_category = mysqli_query($conn, $sql_render_category);
       </div>
       <ul class="prodHead">
         <li class="stt"></li>
-        <li style="text-align: center;" class="prodHeader prodSection">Category</li>
+        <li style="text-align: left;" class="prodHeader prodSection">Category</li>
         <!-- <li class="">Quantity</li> -->
         <li class="price">Order</li>
         <li style="align-items: unset;" class="removeWrap">More</li>
