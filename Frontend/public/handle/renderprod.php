@@ -29,7 +29,7 @@ if (isset($_GET['cate'])) {
                     <!-- </a> -->
                 </div>
                 <div class="product-info my-8">
-                    <a href="#">
+                    <a href="../html/detail.php">
                         <div class="product-name text-base mb-1 hover:text-pri text-center">
                             <?php echo $row['name'] ?>
                         </div>

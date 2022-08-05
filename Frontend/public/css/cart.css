@@ -97,8 +97,9 @@
   background: #fafafa;
 }
 .cart .items .infoWrap {
-  display: flex;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 .cart .items .cartSection {
   display: inline;
@@ -152,7 +153,6 @@
   text-align: center;
   font-size: 1em;
   padding: 0.25em;
-  margin: 1em 0.5em 0 0;
 }
 .cart .items .cartSection .itemImg {
   width: 8em;
