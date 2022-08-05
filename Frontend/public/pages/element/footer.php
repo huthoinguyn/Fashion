@@ -1,7 +1,7 @@
 <!-- Footer -->
-<footer class="flex p-11 gap-7 text-gray-400 bg-gray-100 text-sm font-normal leading-6">
+<footer class="flex-col md:flex-row p-11 gap-7 text-gray-400 bg-gray-100 text-sm font-normal leading-6">
   <!-- Get in touch -->
-  <div class="getintouch w-[40%] pt-8 px-4">
+  <div class="getintouch w-full md:w-[40%] pt-8 px-4">
     <h3 class="uppercase text-base leading-6 font-bold pb-8 text-gray-900">
       GET IN TOUCH
     </h3>
@@ -18,7 +18,7 @@
     </div>
   </div>
   <!-- Categories -->
-  <div class="categories w-[10%] pt-8 px-4">
+  <div class="categories w-full md:w-[10%] pt-8 px-4">
     <h3 class="uppercase text-base leading-6 font-bold pb-8 text-gray-900">
       CATEGORIES
     </h3>
@@ -30,7 +30,7 @@
     </ul>
   </div>
   <!-- Link -->
-  <div class="Link w-[10%] pt-8 px-4">
+  <div class="Link w-full md:w-[10%] pt-8 px-4">
     <h3 class="uppercase text-base leading-6 font-bold pb-8 text-gray-900">
       LINKS
     </h3>
@@ -42,7 +42,7 @@
     </ul>
   </div>
   <!-- Help -->
-  <div class="Help w-[10%] pt-8 px-4">
+  <div class="Help w-full md:w-[10%] pt-8 px-4">
     <h3 class="uppercase text-base leading-6 font-bold pb-8 text-gray-900">
       HELP
     </h3>
@@ -54,7 +54,7 @@
     </ul>
   </div>
   <!-- Newletter -->
-  <div class="Newletter w-[30%] pt-8 px-4">
+  <div class="Newletter w-full md:w-[30%] pt-8 px-4">
     <h3 class="uppercase text-base leading-6 font-bold pb-8 text-gray-900">
       NEWSLETTER
     </h3>

@@ -97,8 +97,8 @@
       </div>
     </div>
   </header>
-  <div class="content pt-12 pb-16 flex justify-around max-w-screen-xl mx-auto">
-    <div class="col-left flex gap-3 w-2/5 max-h-[500px]">
+  <div class="content px-3 md:px-0 pt-12 pb-16 flex-col md:flex-row flex justify-around max-w-screen-xl mx-auto">
+    <div class="col-left flex gap-3 w-full md:w-2/5 max-h-[500px]">
       <div class="thumbnail flex gap-3 flex-col w-1/5">
         <div class="img overflow-hidden w-full h-1/5">
           <img src="../imgs/fog-02.webp" alt="thumbnail" class="w-full h-full object-cover">
@@ -117,7 +117,7 @@
         <img src="../imgs/fog-01.webp" alt="detail-image" class="w-full h-full object-cover cursor-zoom-in transition-all duration-300 ease-in-out hover:scale-125">
       </div>
     </div>
-    <div class="col-right w-2/5">
+    <div class="col-right w-full md:w-2/5">
       <h3 class="name tracking-wider text-gray-800 font-extrabold text-xl">
         FEAR OF GOD
       </h3>
@@ -128,7 +128,7 @@
         $1,295 <del class="font-medium text-gray-600 text-base">$1,359</del>
       </div>
       <p class="text-sm text-gray-400">May be applicable at checkout</p>
-      <div class="size w-[80%] mt-8">
+      <div class="size w-full md:w-[80%] mt-8">
         <ul class="flex justify-between mb-3">
           <li class="">
             Size:
@@ -184,11 +184,11 @@
           Size & fit: <span class="text-gray-600 font-normal">This brand runs true to size to ensure the best fit, we suggest consulting the size chart.</span>
         </p>
         <p class="text-base font-semibold text-gray-900 my-3">
-          Dress by blue saint
+          Jacket by Fear of God
         </p>
         <ul>
           <li>
-            Made form cotton
+            Made form khaki
           </li>
           <li>
             Off-shoulder neckline

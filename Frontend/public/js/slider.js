@@ -35,7 +35,7 @@ window.addEventListener("load", () => {
                   ${sliders[indexSlider].content.desc}
               </p>
               <a
-                href="./html/product.html"
+                href="./html/product.php"
                 class="w-fit px-6 py-2 bg-pri text-white rounded-sm is-fadeUp"
                 >Shopping now</a
               >
