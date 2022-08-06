@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="flex-col md:flex-row p-11 gap-7 text-gray-400 bg-gray-100 text-sm font-normal leading-6">
+<footer class="flex flex-col md:flex-row p-11 gap-7 text-gray-400 bg-gray-100 text-sm font-normal leading-6">
   <!-- Get in touch -->
   <div class="getintouch w-full md:w-[40%] pt-8 px-4">
     <h3 class="uppercase text-base leading-6 font-bold pb-8 text-gray-900">

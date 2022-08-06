@@ -14,50 +14,13 @@
   <link rel="stylesheet" href="../css/detail.css">
   <title>Detail</title>
   <style>
-    .size ul li {
-      min-width: 64px;
-      text-align: center;
+    .size .sz li {
+      cursor: pointer;
     }
 
-    .size ul li:hover {
-      color: #e65540;
+    .size .sz li.is-selected {
       border-color: #e65540;
-    }
-
-    .quantity {
-      display: flex;
-      width: 160px;
-    }
-
-    /* it will support chrome and firefox */
-    .quantity input[type=number]::-webkit-inner-spin-button,
-    .quantity input[type=number]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-    }
-
-    .quantity input,
-    .quantity button {
-      width: 50px;
-      font-size: 1.2rem;
-      text-align: center;
-      background: white;
-      border: 1px solid #aaa;
-    }
-
-    .quantity input {
-      border-left: none;
-      border-right: none;
-    }
-
-    .addcart button {
-      border-radius: unset;
-      outline: none;
-    }
-
-    .prod-detail ul {
-      list-style: circle;
-      font-size: 14px;
-      padding-left: 12px;
+      color: #e65540;
     }
   </style>
 </head>
@@ -100,6 +63,9 @@
   <div class="content px-3 md:px-0 pt-12 pb-16 flex-col md:flex-row flex justify-around max-w-screen-xl mx-auto">
     <div class="col-left flex gap-3 w-full md:w-2/5 max-h-[500px]">
       <div class="thumbnail flex gap-3 flex-col w-1/5">
+        <div class="img is-preview overflow-hidden w-full h-1/5">
+          <img src="../imgs/fog-01.webp" alt="thumbnail" class="w-full h-full object-cover">
+        </div>
         <div class="img overflow-hidden w-full h-1/5">
           <img src="../imgs/fog-02.webp" alt="thumbnail" class="w-full h-full object-cover">
         </div>
@@ -137,11 +103,11 @@
             Size Map
           </li>
         </ul>
-        <ul class="flex justify-between mb-3">
+        <ul class="sz flex justify-between mb-3">
           <li class="px-3 py-1 border">
             S
           </li>
-          <li class="px-3 py-1 border">
+          <li class="is-selected px-3 py-1 border">
             M
           </li>
           <li class="px-3 py-1 border">

@@ -1,3 +1,8 @@
+<?php if (isset($_GET['signout']) && $_GET['signout'] == 1) {
+  unset($_SESSION['signin']);
+  header("Location: ./html/form.php");
+}
+?>
 <!-- header -->
 <header class="w-full h-[80px] flex justify-around items-center transition-all duration-300 bg-white z-50">
   <div class="logo">
@@ -11,10 +16,16 @@
     <li><a href="./html/contact.php">Contact</a></li>
   </ul>
   <div class="action flex items-center">
-    <div class="user icon">
-      <a href="./html/form.php" class="">
+    <div class="user icon relative">
+      <a href="#" class="">
         <span class="material-symbols-outlined"> person </span>
       </a>
+      <div class="user-info absolute rounded-bl-md rounded-br-md shadow-lg top-10 -right-4 w-[200px] p-4 bg-white z-50 flex justify-between flex-col items-center">
+        <p><?php if (isset($_SESSION['signin'])) {
+              echo $_SESSION['signin'];
+            } ?></p>
+        <a class="indigo-text hover:text-pri transition-all duration-100" href="index.php?signout=1">Sign out</a>
+      </div>
     </div>
     <div class="line w-[1px] h-4 mx-4 bg-gray-400"></div>
     <div id="cart-icon" class="icon relative">

@@ -1,0 +1,54 @@
+.size ul li {
+  min-width: 64px;
+  text-align: center;
+  cursor: default;
+}
+
+.size .sz li:hover {
+  color: #e65540;
+  border-color: #e65540;
+}
+
+.quantity {
+  display: flex;
+  width: 160px;
+}
+
+/* it will support chrome and firefox */
+.quantity input[type="number"]::-webkit-inner-spin-button,
+.quantity input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.quantity input,
+.quantity button {
+  width: 50px;
+  font-size: 1.2rem;
+  text-align: center;
+  background: white;
+  border: 1px solid #aaa;
+}
+
+.quantity input {
+  border-left: none;
+  border-right: none;
+}
+
+.addcart button {
+  border-radius: unset;
+  outline: none;
+}
+
+.prod-detail ul {
+  list-style: circle;
+  font-size: 14px;
+  padding-left: 12px;
+}
+
+.img {
+  border: 1px solid transparent;
+}
+
+.img.is-preview {
+  border-color: #e65540;
+}
