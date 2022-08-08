@@ -9,30 +9,25 @@
   width: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #000;
+  background-color: var(--text-color);
   border-radius: 4px;
-  border-right: 2px solid #fff;
+  border-right: 2px solid var(--panel-color);
 }
 
 body {
   background: #333;
 }
 .container {
-  width: 75%;
-  max-width: 1240px;
-  height: 720px;
+  padding: 32px 16px 16px;
+  width: 100%;
+  height: 100%;
   border-radius: 6px;
-  padding: 2% 5%;
-  position: fixed;
   z-index: 999;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  background-color: #fff;
+  background-color: var(--panel-color);
 }
 
 .prod {
-  height: 80%;
+  height: 90%;
   padding: 1em 0;
 }
 
@@ -41,10 +36,10 @@ body {
   width: 100%;
   align-items: center;
   padding: 0.6em 0;
-  border-bottom: 1px solid #fafafa;
+  /* border-bottom: 1px solid #fafafa; */
 }
 .prod .items:nth-child(2n) {
-  background: #fafafa;
+  background: var(--panel-color-odd);
 }
 
 .prod .prodSection {
@@ -53,7 +48,7 @@ body {
 }
 .prod .items .prodSection .itemNumber {
   font-size: 0.75em;
-  color: #777;
+  color: var(--toggle-color);
   margin-bottom: 0.5em;
 }
 .prod .items .prodSection h3 {
@@ -63,11 +58,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.025em;
   margin-bottom: 6px;
+  color: var(--text-color);
+  margin-top: -8px;
 }
 .prod .items .prodSection p {
   display: inline-block;
   font-size: 0.85em;
-  color: #777777;
+  color: var(--text-color);
   font-family: "Montserrat", sans-serif;
 }
 .prod .items .prodSection .itemImg {
@@ -88,11 +85,13 @@ body {
 
 .addProd {
   position: absolute;
-  top: 36px;
-  right: 36px;
+  top: 48px;
+  right: 28px;
+  z-index: 99;
   transform: scale(1.5);
   cursor: pointer;
   transition: all 250ms ease-in;
+  color: var(--text-color);
 }
 
 .addProd:hover {
@@ -122,7 +121,7 @@ body {
 .prod .stt {
   width: 10%;
   font-size: 14px;
-  color: #555;
+  color: var(--toggle-color);
 }
 
 .prod .prodSection img {
@@ -140,7 +139,7 @@ body {
 }
 
 .prod .removeWrap .prodIcon {
-  color: #333;
+  color: var(--text-color);
   transition: all 150ms linear;
 }
 
@@ -168,6 +167,7 @@ body {
   padding: 12px 16px;
   list-style: none;
   height: 10%;
+  color: var(--text-color);
 }
 
 .prodHead .prodHeader {
@@ -177,4 +177,11 @@ body {
 .prod .price {
   width: 20%;
   text-align: center;
+  color: var(--text-color);
+}
+
+@media (max-width: 400px) {
+  .prod .removeWrap {
+    flex-direction: column;
+  }
 }

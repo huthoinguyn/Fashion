@@ -20,7 +20,7 @@
       <a href="#" class="">
         <span class="material-symbols-outlined"> person </span>
       </a>
-      <div class="user-info absolute rounded-bl-md rounded-br-md shadow-lg top-10 -right-4 w-[200px] p-4 bg-white z-50 flex justify-between flex-col items-center">
+      <div class="user-info hidden absolute rounded-bl-md rounded-br-md shadow-lg top-10 -right-4 w-[200px] p-4 bg-white z-50 flex justify-between flex-col items-center">
         <p><?php if (isset($_SESSION['signin'])) {
               echo $_SESSION['signin'];
             } ?></p>

@@ -83,3 +83,7 @@ body {
     transform: translate(0, 160%);
   }
 }
+
+.user-info.show-user {
+  display: block;
+}

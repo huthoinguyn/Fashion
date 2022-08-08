@@ -1,74 +1,79 @@
-<ul id="slide-out" class="side-nav fixed z-depth-2">
-    <li class="center no-padding">
-        <div class="indigo darken-2 white-text" style="height: 180px;">
-            <div class="row">
-                <img style="margin-top: 5%;" width="100" height="100" src="images/avatar.jpg" class="circle responsive-img" />
-
-                <p style="margin-top: -13%;">
-                    Nguyen Huu Thoai
-                </p>
-            </div>
+<?php if (isset($_GET['logout']) && $_GET['logout'] == 1) {
+    unset($_SESSION['login']);
+    header("Location:login.php");
+}
+?>
+<nav>
+    <div class="logo-name">
+        <div class="logo-image">
+            <img src="images/avatar.jpg" alt="" />
         </div>
-    </li>
 
-    <li id="dash_dashboard"><a class="waves-effect" href="#!"><b>Dashboard</b></a></li>
+        <span class="logo_name">
+            <?php if (isset($_SESSION['login'])) {
+                echo $_SESSION['login'];
+            } ?>
+        </span>
+    </div>
 
-    <ul class="collapsible" data-collapsible="accordion">
-        <li id="dash_users">
-            <div id="dash_users_header" class="collapsible-header waves-effect"><b>Users</b></div>
-            <div id="dash_users_body" class="collapsible-body">
-                <ul>
-                    <li id="users_seller">
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Seller</a>
-                    </li>
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li>
+                <a href="index.php?manage=dasboard">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.php?manage=product">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Product</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.php?manage=category">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Category</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.php?manage=customer">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Customer</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.php?manage=blog">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="uil uil-share"></i>
+                    <span class="link-name">Share</span>
+                </a>
+            </li>
+        </ul>
 
-                    <li id="users_customer">
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Customer</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
+        <ul class="logout-mode">
+            <li>
+                <a href="index.php?logout=1">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a>
+            </li>
 
-        <li id="dash_products">
-            <div id="dash_products_header" class="collapsible-header waves-effect"><b>Products</b></div>
-            <div id="dash_products_body" class="collapsible-body">
-                <ul>
-                    <li id="products_product">
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Products</a>
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Orders</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
+            <li class="mode">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
 
-        <li id="dash_categories">
-            <div id="dash_categories_header" class="collapsible-header waves-effect"><b>Categories</b></div>
-            <div id="dash_categories_body" class="collapsible-body">
-                <ul>
-                    <li id="categories_category">
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Category</a>
-                    </li>
-
-                    <li id="categories_sub_category">
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Sub Category</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
-        <li id="dash_brands">
-            <div id="dash_brands_header" class="collapsible-header waves-effect"><b>Brands</b></div>
-            <div id="dash_brands_body" class="collapsible-body">
-                <ul>
-                    <li id="brands_brand">
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Brand</a>
-                    </li>
-
-                    <li id="brands_sub_brand">
-                        <a class="waves-effect" style="text-decoration: none;" href="#!">Sub Brand</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
-</ul>
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

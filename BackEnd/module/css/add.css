@@ -26,8 +26,8 @@ body {
   align-items: center;
   background: linear-gradient(
     to left,
-    rgba(255, 255, 255, 0.4),
-    rgba(255, 255, 255, 0.3)
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.5)
   );
 }
 
@@ -63,13 +63,13 @@ form input {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.2)
   );
-  color: #fff;
+  color: var(--panel-color);
 }
 form input::placeholder {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  color: #fff;
+  color: var(--panel-color);
 }
 
 form button {
@@ -81,7 +81,7 @@ form button {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.2)
   );
-  color: #fff;
+  color: var(--panel-color);
   cursor: pointer;
 }
 /* Select */
@@ -136,7 +136,7 @@ select::-ms-expand {
 
 .uploader h3 {
   text-align: left;
-  color: #fff;
+  color: var(--panel-color);
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 6px;
@@ -262,10 +262,10 @@ select::-ms-expand {
   padding: 0 1rem;
   height: 36px;
   line-height: 36px;
-  color: #fff;
+  color: var(--panel-color);
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
-  background: #000;
+  background: var(--text-color);
   border-color: #454cad;
   cursor: pointer;
 }

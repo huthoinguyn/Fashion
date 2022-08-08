@@ -47,6 +47,7 @@ const app = {
     };
     document.body.onclick = (e) => {
       if (e.target.matches("#cart")) cart.style.display = "none";
+      $(".user-info").classList.toggle("show-user");
     };
     $(".continue").onclick = (e) => {
       e.preventDefault();
@@ -63,6 +64,9 @@ const app = {
         _this.cartRender();
       };
     });
+    $(".user").onclick = (e) => {
+      e.preventDefault();
+    };
 
     if ($(".add-cart")) {
       $(".add-cart").onclick = () => {

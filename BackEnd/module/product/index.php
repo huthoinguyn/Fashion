@@ -1,5 +1,5 @@
 <?php
-include('../../config/config.php');
+// include('../../config/config.php');
 $sql_render_addprod = "SELECT * FROM products ORDER BY id DESC";
 $querry_addprod = mysqli_query($conn, $sql_render_addprod);
 ?>
@@ -32,7 +32,8 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
 </head>
 
 <body>
-  <?php include('./feature/add.php') ?>
+  <?php include('./module/product/feature/add.php') ?>
+
   <div class="container">
     <div class="addProd">
       <span class="material-symbols-outlined">
@@ -40,9 +41,6 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
       </span>
     </div>
     <div class="prod">
-      <div class="prod-title">
-        Products Manager
-      </div>
       <ul class="prodHead">
         <li class="stt"></li>
         <li style="text-align: left;" class="prodHeader prodSection">Product</li>
@@ -62,7 +60,7 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
               <p class="stt"><?php echo $i ?></p>
 
               <div class="prodSection">
-                <img src=" <?php echo '../../../images/' . $addprod['image'] ?> " alt="" class="itemImg w-[128px] h-[100px] object-cover" />
+                <img src=" <?php echo './images/' . $addprod['image'] ?> " alt="" class="itemImg w-[128px] h-[100px] object-cover" />
 
                 <p class="itemNumber">
                 </p>
@@ -81,7 +79,7 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
               <!-- ./handle/handleedit.php?prodId=<?php // echo $addprod['id'] 
                                                   ?> -->
               <div class="removeWrap">
-                <a href="./feature/edit.php?prodId=<?php echo $addprod['id'] ?>" class="prodIcon editProd">
+                <a href="module/product/feature/edit.php?prodId=<?php echo $addprod['id'] ?>" class="prodIcon editProd">
                   <span class="prodIcon material-symbols-outlined">
                     edit_note
                   </span>
@@ -97,14 +95,6 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
 
         <?php } ?>
       </ul>
-    </div>
-    <div class="backhome">
-      <a href="../../../">
-        Back Home
-        <!-- <span class="material-symbols-outlined">
-          low_priority
-        </span> -->
-      </a>
     </div>
   </div>
   <script src="./js/upload.js"></script>

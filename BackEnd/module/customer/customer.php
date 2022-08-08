@@ -1,5 +1,4 @@
 <?php
-include('../../config/config.php');
 $sql_render_cus = "SELECT * FROM customer ORDER BY id DESC";
 $querry_cus = mysqli_query($conn, $sql_render_cus);
 ?>
@@ -34,9 +33,6 @@ $querry_cus = mysqli_query($conn, $sql_render_cus);
 <body>
   <div class="container">
     <div class="prod">
-      <div class="prod-title">
-        Customer Manager
-      </div>
       <ul class="prodHead">
         <li class="stt"></li>
         <li style="text-align: left;" class="prodHeader prodSection">Customer</li>
@@ -89,14 +85,6 @@ $querry_cus = mysqli_query($conn, $sql_render_cus);
 
         <?php } ?>
       </ul>
-    </div>
-    <div class="backhome">
-      <a href="../../../">
-        Back Home
-        <!-- <span class="material-symbols-outlined">
-          low_priority
-        </span> -->
-      </a>
     </div>
   </div>
 </body>

@@ -1,5 +1,4 @@
 <?php
-include('../../config/config.php');
 $sql_render_category = "SELECT * FROM categories ORDER BY sort ASC";
 $querry_category = mysqli_query($conn, $sql_render_category);
 ?>
@@ -32,7 +31,7 @@ $querry_category = mysqli_query($conn, $sql_render_category);
 </head>
 
 <body>
-  <?php include('./feature/add.php') ?>
+  <?php include('./module/category/feature/add.php') ?>
   <div class="container">
     <div class="addProd">
       <span class="material-symbols-outlined">
@@ -40,9 +39,6 @@ $querry_category = mysqli_query($conn, $sql_render_category);
       </span>
     </div>
     <div class="prod">
-      <div class="prod-title">
-        Category Manager
-      </div>
       <ul class="prodHead">
         <li class="stt"></li>
         <li style="text-align: left;" class="prodHeader prodSection">Category</li>
@@ -96,14 +92,6 @@ $querry_category = mysqli_query($conn, $sql_render_category);
 
         <?php } ?>
       </ul>
-    </div>
-    <div class="backhome">
-      <a href="../../../">
-        Back Home
-        <!-- <span class="material-symbols-outlined">
-          low_priority
-        </span> -->
-      </a>
     </div>
   </div>
   <script src="./js/upload.js"></script>
