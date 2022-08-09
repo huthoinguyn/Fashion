@@ -19,31 +19,31 @@
     <div class="menu-items">
         <ul class="nav-links">
             <li>
-                <a href="index.php?manage=dasboard">
+                <a href="index.php?manage=dasboard&handle=1">
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dahsboard</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?manage=product">
+                <a href="index.php?manage=product&handle=1">
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Product</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?manage=category">
+                <a href="index.php?manage=category&handle=1">
                     <i class="uil uil-chart"></i>
                     <span class="link-name">Category</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?manage=customer">
+                <a href="index.php?manage=customer&handle=1">
                     <i class="uil uil-thumbs-up"></i>
                     <span class="link-name">Customer</span>
                 </a>
             </li>
             <li>
-                <a href="index.php?manage=blog">
+                <a href="index.php?manage=blog&handle=1">
                     <i class="uil uil-comments"></i>
                     <span class="link-name">Blog</span>
                 </a>

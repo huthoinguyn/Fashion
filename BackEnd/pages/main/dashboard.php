@@ -30,7 +30,7 @@
       </div>
       <div class="box box3">
         <i class="uil uil-share"></i>
-        <span class="text">Category</span>
+        <span class="text">Cart</span>
         <span class="number">10,120</span>
       </div>
     </div>

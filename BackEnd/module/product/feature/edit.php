@@ -48,7 +48,7 @@ $querry_edit = mysqli_query($conn, $sql_edit);
                     <input id="file-upload" type="file" name="fileUpload" accept="image/*" />
 
                     <label for="file-upload" id="file-drag">
-                        <img id="file-image" src="../../../images/<?php echo $editprod['image'] ?>" alt="Preview" class="" />
+                        <img id="file-image" src="./images/<?php echo $editprod['image'] ?>" alt="Preview" class="" />
                         <div id="start" class="hidden">
                             <i class="fa fa-download" aria-hidden="true"></i>
                             <div>Select a file or drag here</div>
@@ -67,7 +67,7 @@ $querry_edit = mysqli_query($conn, $sql_edit);
             <?php } ?>
             </form>
         </div>
-        <script src="../js/upload.js"></script>
+        <script src="module/product/js/upload.js"></script>
 </body>
 
 </html>

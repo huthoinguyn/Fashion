@@ -68,7 +68,6 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
                 <h3><?php echo $addprod['name'] ?></h3>
 
                 <p> <?php echo $addprod['category'] ?></p>
-
               </div>
 
               <!-- <div class='prodqty w-[10%]'></div> -->
@@ -79,12 +78,12 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
               <!-- ./handle/handleedit.php?prodId=<?php // echo $addprod['id'] 
                                                   ?> -->
               <div class="removeWrap">
-                <a href="module/product/feature/edit.php?prodId=<?php echo $addprod['id'] ?>" class="prodIcon editProd">
+                <a href="index.php?manage=product&handle=edit&prodId=<?php echo $addprod['id'] ?>" class="prodIcon editProd">
                   <span class="prodIcon material-symbols-outlined">
                     edit_note
                   </span>
                 </a>
-                <a href="./handle/handleremove.php?prodId=<?php echo $addprod['id'] ?>" class="prodIcon remove">
+                <a href="module/product/handle/handleremove.php?prodId=<?php echo $addprod['id'] ?>" class="prodIcon remove">
                   <span class="material-symbols-outlined">
                     close
                   </span>

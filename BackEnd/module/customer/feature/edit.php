@@ -28,12 +28,12 @@ $querry_edit = mysqli_query($conn, $sql_edit);
         $i++;
     ?>
         <div class="edit-wrapper">
-            <form action="../handle/handleedit.php?cusId=<?php echo $editcus['id'] ?>" method="post">
+            <form action="module/customer/handle/handleedit.php?cusId=<?php echo $editcus['id'] ?>" method="post">
                 <h3 style="text-align: center; color: #fff;">Edit Category</h3>
                 <input type="text" name="name" placeholder="Enter New Name" value="<?php echo $editcus['name'] ?>" />
                 <input type="email" name="email" placeholder="Enter New Email" value="<?php echo $editcus['email'] ?>" />
                 <input type="password" name="password" placeholder="Enter New Password" value="<?php echo $editcus['password'] ?>" />
-                <input type="password" name="passwordag" placeholder="Enter New Password Again" value="" />
+                <input type="password" name="passwordag" placeholder="Confirm New Password" value="" />
                 <button type="submit" name="update">Submit</button>
             <?php } ?>
             </form>

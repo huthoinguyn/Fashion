@@ -69,12 +69,12 @@ $querry_cus = mysqli_query($conn, $sql_render_cus);
               <!-- ./handle/handleedit.php?prodId=<?php // echo $cus['id'] 
                                                   ?> -->
               <div class="removeWrap">
-                <a href="./feature/edit.php?cusId=<?php echo $cus['id'] ?>" class="prodIcon editProd">
+                <a href="index.php?manage=customer&handle=edit&cusId=<?php echo $cus['id'] ?>" class="prodIcon editProd">
                   <span class="prodIcon material-symbols-outlined">
                     edit_note
                   </span>
                 </a>
-                <a href="./handle/handleremove.php?cusId=<?php echo $cus['id'] ?>" class="prodIcon remove">
+                <a href="index.php?manage=customer&handle=remove&cusId=<?php echo $cus['id'] ?>" class="prodIcon remove">
                   <span class="material-symbols-outlined">
                     close
                   </span>

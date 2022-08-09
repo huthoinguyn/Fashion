@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <form action="./handle/handlelogin.php" method="POST" class="login">
+    <form action="./handle/handlesignup.php" method="POST" class="login">
         <div class="login-screen">
             <div class="app-title">
                 <h1>Login</h1>
@@ -38,10 +38,14 @@
                     <input type="password" name="password" class="login-field" value="" placeholder="password" id="login-pass">
                     <label class="login-field-icon fui-lock" for="login-pass"></label>
                 </div>
+                <div class="control-group">
+                    <input type="password" name="passwordag" class="login-field" value="" placeholder="confirm password" id="login-pass">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
 
                 <!-- <a class="btn btn-primary btn-large btn-block"  href="#">login</a> -->
-                <button class="login-link btn btn-primary btn-large btn-block" name="login">Login</button>
-                <a href="./signup.php">Sign up</a>
+                <button class="login-link btn btn-primary btn-large btn-block" name="signup">Sign up</button>
+                <p>Already an account <a href="#">Sign in</a></p>
             </div>
         </div>
     </form>

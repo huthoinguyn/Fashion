@@ -5,17 +5,26 @@
         <div class=""></div>
     </div>
     <?php
-    if (isset($_GET['manage'])) {
-        $temp = $_GET['manage'];
+    if (isset($_GET['manage']) && $_GET['handle']) {
+        $manage = $_GET['manage'];
+        $handle = $_GET['handle'];
     } else {
-        $temp = '';
+        $manage = '';
+        $handle = '';
     }
-    if ($temp == 'product') {
+    if ($manage == 'product' && $handle == '1') {
         include("module/product/index.php");
-    } elseif ($temp == 'customer') {
+    } elseif ($manage == 'product' && $handle == 'edit') {
+        include("module/product/index.php");
+        include('module/product/feature/edit.php');
+    } elseif ($manage == 'customer' && $handle == '1') {
         include("module/customer/customer.php");
-    } elseif ($temp == 'category') {
+    } elseif ($manage == 'customer' && $handle == 'edit') {
+        include("module/customer/customer.php");
+        include('module/customer/feature/edit.php');
+    } elseif ($manage == 'category') {
         include("module/category/category.php");
+        // } elseif ($manage == 'category') {
     } else {
         include("./pages/main/dashboard.php");
     }
