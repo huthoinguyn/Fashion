@@ -43,7 +43,7 @@ if (!isset($_SESSION['login'])) {
   include('./pages/element/nav.php');
   include('./pages/element/main.php');
   ?>
-  <!-- <script src="./module/js/upload.js"></script> -->
+  <script src="./module/product/js/upload.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

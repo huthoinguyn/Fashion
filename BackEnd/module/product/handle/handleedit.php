@@ -4,7 +4,8 @@ $prodId = $_GET['prodId'];
 $name = $_POST['title'];
 $price = $_POST['price'];
 $category = $_POST['category'];
-$fileUpload = $_FILES['fileUpload']['name'];
+// $fileUpload = $_FILES['fileUpload']['name'];
+$fileUpload = basename($_FILES['fileUpload']['name']);    
 
 $fileUrl = '../../../images/' . $fileUpload;
 if (move_uploaded_file($_FILES['fileUpload']['tmp_name'], $fileUrl));

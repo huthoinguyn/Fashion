@@ -18,15 +18,6 @@ $querry_cus = mysqli_query($conn, $sql_render_cus);
       opacity: 1;
       visibility: visible;
     }
-
-    .backhome {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
   </style>
 </head>
 
@@ -74,7 +65,7 @@ $querry_cus = mysqli_query($conn, $sql_render_cus);
                     edit_note
                   </span>
                 </a>
-                <a href="index.php?manage=customer&handle=remove&cusId=<?php echo $cus['id'] ?>" class="prodIcon remove">
+                <a href="module/customer/handle/handleremove.php?cusId=<?php echo $cus['id'] ?>" class="prodIcon remove">
                   <span class="material-symbols-outlined">
                     close
                   </span>

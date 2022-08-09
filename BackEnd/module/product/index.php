@@ -1,5 +1,6 @@
 <?php
 // include('../../config/config.php');
+$conn = mysqli_connect("localhost", "root", "", "fashion");
 $sql_render_addprod = "SELECT * FROM products ORDER BY id DESC";
 $querry_addprod = mysqli_query($conn, $sql_render_addprod);
 ?>
@@ -60,7 +61,7 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
               <p class="stt"><?php echo $i ?></p>
 
               <div class="prodSection">
-                <img src=" <?php echo './images/' . $addprod['image'] ?> " alt="" class="itemImg w-[128px] h-[100px] object-cover" />
+                <img src="<?php echo 'images/' . $addprod['image'] ?> " alt="" class="itemImg w-[128px] h-[100px] object-cover" />
 
                 <p class="itemNumber">
                 </p>
@@ -96,7 +97,7 @@ $querry_addprod = mysqli_query($conn, $sql_render_addprod);
       </ul>
     </div>
   </div>
-  <script src="./js/upload.js"></script>
+  <!-- <script src="./js/upload.js"></script> -->
   <script>
     const $ = document.querySelector.bind(document);
 

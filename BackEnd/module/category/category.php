@@ -76,12 +76,12 @@ $querry_category = mysqli_query($conn, $sql_render_category);
               <!-- ./handle/handleedit.php?prodId=<?php // echo $cate['id'] 
                                                   ?> -->
               <div class="removeWrap">
-                <a href="./feature/edit.php?cateId=<?php echo $cate['id'] ?>" class="prodIcon editProd">
+                <a href="index.php?manage=category&handle=edit&cateId=<?php echo $cate['id'] ?>" class="prodIcon editProd">
                   <span class="prodIcon material-symbols-outlined">
                     edit_note
                   </span>
                 </a>
-                <a href="./handle/handleremove.php?cateId=<?php echo $cate['id'] ?>" class="prodIcon remove">
+                <a href="module/category/handle/handleremove.php?cateId=<?php echo $cate['id'] ?>" class="prodIcon remove">
                   <span class="material-symbols-outlined">
                     close
                   </span>

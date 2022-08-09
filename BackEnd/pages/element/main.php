@@ -22,11 +22,15 @@
     } elseif ($manage == 'customer' && $handle == 'edit') {
         include("module/customer/customer.php");
         include('module/customer/feature/edit.php');
-    } elseif ($manage == 'category') {
+    } elseif ($manage == 'category' && $handle == '1') {
         include("module/category/category.php");
-        // } elseif ($manage == 'category') {
+    } 
+    elseif ($manage == 'category' && $handle == 'edit') {
+        include("module/category/category.php");
+        include('module/category/feature/edit.php');
     } else {
         include("./pages/main/dashboard.php");
     }
     ?>
 </main>
+<!-- <script src="./module/product/js/upload.js"></script> -->

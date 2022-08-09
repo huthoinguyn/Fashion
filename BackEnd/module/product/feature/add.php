@@ -1,5 +1,5 @@
 <div class="add-wrapper is-hidden">
-    <form action="./handle/handleadd.php" method="post" enctype="multipart/form-data">
+    <form action="module/product/handle/handleadd.php" method="post" enctype="multipart/form-data">
         <h3 style="text-align: center; color: #fff;">Add Product</h3>
         <input type="text" name="title" placeholder="Enter Title" />
         <input type="text" name="price" placeholder="Enter Price" />
@@ -40,4 +40,3 @@
         <button type="submit" name="add">Add</button>
     </form>
 </div>
-<script src="../js/upload.js"></script>

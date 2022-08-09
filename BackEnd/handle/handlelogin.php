@@ -11,14 +11,12 @@ if (isset($_POST['login'])) {
         $_SESSION['login'] = $username;
         header('Location: ../');
     } else {
-?>
-        <!-- <script>
-            alert('Sai username hoặc mật khẩu');
-        </script> -->
-<?php
         header('Location: ../login.php');
-        echo '<script type="text/javascript">alert("username or password not true")</script>';
+        // echo '<script type="text/javascript">alert("username or password not true")</script>';
     }
 }
 
 ?>
+<script>
+    alert('Sai username hoặc mật khẩu');
+</script>
