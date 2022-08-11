@@ -105,6 +105,7 @@ function ekUpload() {
         xhr.setRequestHeader("X-File-Name", file.name);
         xhr.setRequestHeader("X-File-Size", file.size);
         xhr.setRequestHeader("Content-Type", "multipart/form-data");
+        console.log(file);
         xhr.send(file);
       } else {
         output("Please upload a smaller file (< " + fileSizeLimit + " MB).");

@@ -47,7 +47,6 @@ const app = {
     };
     document.body.onclick = (e) => {
       if (e.target.matches("#cart")) cart.style.display = "none";
-      $(".user-info").classList.toggle("show-user");
     };
     $(".continue").onclick = (e) => {
       e.preventDefault();
@@ -59,13 +58,15 @@ const app = {
         price = prod.querySelector(".product-price span").textContent,
         style = window.getComputedStyle(image, false),
         bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
-      prod.querySelector(".add-cart-btn").onclick = () => {
+      prod.querySelector(".add-cart-btn").onclick = (e) => {
+        e.preventDefault()
         _this.addCart(bi, name, Number(price.slice(1)));
         _this.cartRender();
       };
     });
     $(".user").onclick = (e) => {
       e.preventDefault();
+      $(".user-info").classList.toggle("show-user");
     };
 
     if ($(".add-cart")) {

@@ -1,5 +1,5 @@
 <?php
-include('../../../config/config.php');
+$conn = mysqli_connect("localhost", "root", "", "fashion");
 $prodId = $_GET['prodId'];
 $name = $_POST['title'];
 $price = $_POST['price'];

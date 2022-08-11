@@ -15,7 +15,6 @@
             } ?>
         </span>
     </div>
-
     <div class="menu-items">
         <ul class="nav-links">
             <li>

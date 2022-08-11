@@ -5,7 +5,6 @@ if (!isset($_SESSION['login'])) {
 }
 ?>
 <!DOCTYPE html>
-<!--=== Coding by CodingLab | www.codinglabweb.com === -->
 <html lang="en">
 
 <head>
@@ -16,6 +15,7 @@ if (!isset($_SESSION['login'])) {
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link rel="stylesheet" href="./module/css/style.css">
   <link rel="stylesheet" href="./module/css/add.css">
+  <link rel="stylesheet" href="./css/search.css">
 
   <!----======== CSS ======== -->
   <link rel="stylesheet" href="./css/style.css" />
@@ -45,6 +45,7 @@ if (!isset($_SESSION['login'])) {
   ?>
   <script src="./module/product/js/upload.js"></script>
   <script src="./js/script.js"></script>
+  
 </body>
 
 </html>
