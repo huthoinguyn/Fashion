@@ -65,7 +65,7 @@ const app = {
       };
     });
     $(".user").onclick = (e) => {
-      e.preventDefault();
+      // e.preventDefault();
       $(".user-info").classList.toggle("show-user");
     };
 

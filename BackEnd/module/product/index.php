@@ -1,3 +1,6 @@
+<?php 
+include('handle/pagination.php')
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +26,18 @@
       justify-content: center;
       align-items: center;
     }
+
+    .pagination{
+      display: flex;
+      list-style: none;
+    }
+    .pagination li a{
+      color: var(--text-color);
+      padding: 12px;
+      display: block;
+      font-size: 20px;
+    }
+
   </style>
 </head>
 
@@ -45,7 +60,58 @@
       </ul>
       <ul class="prodWrap">
         <!--<li class="items even">Item 2</li>-->
+        <?php
+        // $query_prod = 'SELECT * FROM products';
+        // $result = mysqli_query($conn, $query_prod);
+        $query_prod = 'SELECT * FROM products LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+        $result = mysqli_query($conn, $query_prod);
+        $i = 0;
+        while ($prod = mysqli_fetch_array($result)) {
+          $i++;
+        ?>
+          <li class="items odd">
+            <div class="infoWrap">
+              <p class="stt"><?php echo $i ?></p>
 
+              <div class="prodSection">
+                <img src="<?php echo 'images/' . $prod['image'] ?> " alt="" class="itemImg w-[128px] h-[100px] object-cover" />
+
+                <p class="itemNumber">
+                </p>
+                <h3><?php echo $prod['name'] ?></h3>
+
+                <p> <?php echo $prod['category'] ?></p>
+              </div>
+
+              <!-- <div class='prodqty w-[10%]'></div> -->
+
+              <div class="price">
+                <p><?php echo "$" . $prod['price'] ?></p>
+              </div>
+              <!-- ./handle/handleedit.php?prodId=<?php // echo $prod['id'] 
+                                                  ?> -->
+              <div class="removeWrap">
+                <a href="module/product/feature/edit.php?prodId=<?php echo $prod['id'] ?>" class="prodIcon editProd">
+                  <span class="prodIcon material-symbols-outlined">
+                    edit_note
+                  </span>
+                </a>
+                <a href="module/product/handle/handleremove.php?prodId=<?php echo $prod['id'] ?>" class="prodIcon remove">
+                  <span class="material-symbols-outlined">
+                    close
+                  </span>
+                </a>
+              </div>
+            </div>
+          </li>
+        <?php  }
+        ?>
+      </ul>
+      <ul class="pagination">
+        <?php
+        for ($page = 1; $page <= $number_of_pages; $page++) { ?>
+          <li><a href="index.php?manage=product&handle=1&page=<?php echo $page ?>"><?php echo $page ?></a></li>
+        <?php } ?>
       </ul>
     </div>
   </div>

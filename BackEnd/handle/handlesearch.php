@@ -69,10 +69,11 @@ if (isset($_POST["input"])) {
 
         <?php  } ?>
     <?php } else {
-        echo "<h3>Empty</h3>";
+        echo "<h3 style='color:var(--text-color);'>Empty</h3>";
     }
 } else {
-    $query_prod = 'SELECT * FROM products';
+    include('./pagination.php');
+    $query_prod = 'SELECT * FROM products LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
     $result = mysqli_query($conn, $query_prod);
     // if (mysqli_num_rows($result) > 0) { 
     ?>
@@ -119,5 +120,5 @@ if (isset($_POST["input"])) {
             </div>
         </li>
 
-    <?php  }
+<?php  }
 }
