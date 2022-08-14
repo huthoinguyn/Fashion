@@ -1,15 +1,3 @@
-<!-- <section class="dashboard"> -->
-<!-- <div class="top">
-  <i class="uil uil-bars sidebar-toggle"></i>
-
-  <div class="search-box">
-    <i class="uil uil-search"></i>
-    <input type="text" placeholder="Search here..." />
-  </div>
-
-  <img src="images/avatar.jpg" alt="" />
-</div> -->
-
 <div class="dash-content">
   <div class="overview">
     <div class="title">
@@ -21,21 +9,48 @@
       <div class="box box1">
         <i class="uil uil-thumbs-up"></i>
         <span class="text">Product</span>
-        <span class="number">50,120</span>
+        <?php $conn = mysqli_connect('localhost', 'root', '', 'fashion');
+        $query_prod = 'SELECT * FROM products';
+        $prod_result = mysqli_query($conn, $query_prod);
+        $prod_total = mysqli_num_rows($prod_result);
+        if ($prod_total) {
+        ?>
+          <span class="number"><?php echo $prod_total ?></span>
+        <?php
+        } else {
+        ?>
+          <span class="number"> Product Emty</span>
+        <?php
+        }
+        ?>
       </div>
       <div class="box box2">
         <i class="uil uil-comments"></i>
         <span class="text">Customer</span>
-        <span class="number">20,120</span>
+        <?php $conn = mysqli_connect('localhost', 'root', '', 'fashion');
+        $query_cus = 'SELECT * FROM customer';
+        $cus_result = mysqli_query($conn, $query_cus);
+        $cus_total = mysqli_num_rows($cus_result);
+        if ($cus_total) {
+        ?>
+          <span class="number"><?php echo $cus_total ?></span>
+        <?php
+        } else {
+        ?>
+          <span class="number"> Customer Emty</span>
+        <?php
+        }
+        ?>
       </div>
       <div class="box box3">
         <i class="uil uil-share"></i>
         <span class="text">Cart</span>
-        <span class="number">10,120</span>
+        <span class="number">12</span>
       </div>
     </div>
   </div>
 
+  <?php include('pages/main/chart.php'); ?>
   <div class="activity">
     <div class="title">
       <i class="uil uil-clock-three"></i>
@@ -96,4 +111,3 @@
     </div>
   </div>
 </div>
-<!-- </section> -->

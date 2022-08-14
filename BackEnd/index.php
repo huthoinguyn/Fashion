@@ -13,9 +13,12 @@ if (!isset($_SESSION['login'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Font  google -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="./module/css/style.css">
   <link rel="stylesheet" href="./module/css/add.css">
   <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/chart.css">
 
   <!----======== CSS ======== -->
   <link rel="stylesheet" href="./css/style.css" />

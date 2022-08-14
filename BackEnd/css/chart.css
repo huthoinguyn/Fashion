@@ -1,0 +1,20 @@
+.charts .chart-container {
+  background-color: var(--panel-color);
+  transition: var(--tran-05);
+}
+
+.charts .chart-container h3 {
+  color: var(--text-color);
+  transition: var(--tran-05);
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.row .col-lg-6 {
+  width: 49%;
+  border-radius: 4px;
+  overflow: hidden;
+}
