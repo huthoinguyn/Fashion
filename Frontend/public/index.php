@@ -28,14 +28,15 @@ if (!isset($_SESSION['signin'])) {
     include('./pages/element/banner.php');
     include('./pages/element/header.php');
     include('./pages/element/cart.php');
-    include('./pages/element/slider.php');
-    include('./pages/element/content.php');
+    include('./pages/element/main.php');
     include('./pages/element/footer.php');
     ?>
   </div>
   <script src="./js/load.js"></script>
   <script src="./js/slider.js"></script>
   <script src="./js/cart.js"></script>
+  <script src="js/detail.js"></script>
+
 </body>
 
 </html>

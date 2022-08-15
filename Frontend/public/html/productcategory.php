@@ -10,7 +10,7 @@ while ($row = mysqli_fetch_array($result)) {
     $i++;
 ?>
     <li>
-        <a href="?cate=<?php echo $row['category'] ?>#prod">
+        <a href="index.php?page=product&cate=<?php echo $row['category'] ?>#prod">
             <?php echo $row['category'] ?>
         </a>
     </li>

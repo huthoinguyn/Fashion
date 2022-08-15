@@ -27,5 +27,10 @@ $this_page_first_result = ($page - 1) * $results_per_page;
 
 
 // display the links to the pages
-
 ?>
+
+<h3>Danh muc san pham: <?php if($query_title){
+echo $query_title['tendanhmuc'];
+}else{
+echo 'khong ton tai';
+} ?></h3>

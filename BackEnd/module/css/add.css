@@ -81,7 +81,7 @@ form button {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.2)
   );
-  color: var(--panel-color);
+  color: var(--text-color);
   cursor: pointer;
 }
 /* Select */
@@ -136,7 +136,7 @@ select::-ms-expand {
 
 .uploader h3 {
   text-align: left;
-  color: var(--panel-color);
+  color: var(--text-color);
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 6px;

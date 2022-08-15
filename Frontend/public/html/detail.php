@@ -5,13 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-  <link rel="stylesheet" href="../output.css">
-  <link rel="stylesheet" href="../css/loading.css">
-  <link rel="stylesheet" href="../css/cart.css">
-  <link rel="stylesheet" href="../css/detail.css">
+  <link rel="stylesheet" href="css/detail.css">
   <title>Detail</title>
   <style>
     .size .sz li {
@@ -26,61 +20,27 @@
 </head>
 
 <body>
-  <?php include('../pages/element/loading.php') ?>
-  <?php
-  include('../pages/element/cart.php');
-  include('../pages/element/banner.php');
-  // banner
-  ?>
-  <header class="w-full h-[80px] flex justify-around items-center transition-all bg-white z-50">
-    <div class="logo">
-      <img src="../imgs/logo.png" alt="" />
-    </div>
-    <ul class="flex list-none font-Montserrat font-normal text-[15px] leading-[26px]">
-      <li><a href="../index.php">Home</a></li>
-      <li class="is-active"><a href="./product.php">Product</a></li>
-      <li><a href="./blog.php">Blog</a></li>
-      <li><a href="./about.php">About</a></li>
-      <li><a href="./contact.php">Contact</a></li>
-    </ul>
-    <div class="action flex items-center">
-      <div class="user icon">
-        <a href="./form.php" class="">
-          <span class="material-symbols-outlined"> person </span>
-        </a>
-      </div>
-      <div class="line w-[1px] h-4 mx-4 bg-gray-400"></div>
-      <div id="cart-icon" class="icon relative">
-        <a href="" class="">
-          <span class="material-symbols-outlined"> shopping_cart </span>
-        </a>
-        <div class="cart-noti w-4 h-4 rounded-full absolute -top-2 -right-2 bg-pri hidden justify-center items-center">
-          <p class="text-[10px] text-white"></p>
-        </div>
-      </div>
-    </div>
-  </header>
   <div class="content px-3 md:px-0 pt-12 pb-16 flex-col md:flex-row flex justify-around max-w-screen-xl mx-auto">
     <div class="col-left flex gap-3 w-full md:w-2/5 max-h-[500px]">
       <div class="thumbnail flex gap-3 flex-col w-1/5">
         <div class="img is-preview overflow-hidden w-full h-1/5">
-          <img src="../imgs/fog-01.webp" alt="thumbnail" class="w-full h-full object-cover">
+          <img src="imgs/fog-01.webp" alt="thumbnail" class="w-full h-full object-cover">
         </div>
         <div class="img overflow-hidden w-full h-1/5">
-          <img src="../imgs/fog-02.webp" alt="thumbnail" class="w-full h-full object-cover">
+          <img src="imgs/fog-02.webp" alt="thumbnail" class="w-full h-full object-cover">
         </div>
         <div class="img overflow-hidden w-full h-1/5">
-          <img src="../imgs/fog-03.webp" alt="thumbnail" class="w-full h-full object-cover">
+          <img src="imgs/fog-03.webp" alt="thumbnail" class="w-full h-full object-cover">
         </div>
         <div class="img overflow-hidden w-full h-1/5">
-          <img src="../imgs/fog-04.webp" alt="thumbnail" class="w-full h-full object-cover">
+          <img src="imgs/fog-04.webp" alt="thumbnail" class="w-full h-full object-cover">
         </div>
         <div class="img overflow-hidden w-full h-1/5">
-          <img src="../imgs/fog-05.webp" alt="thumbnail" class="w-full h-full object-cover">
+          <img src="imgs/fog-05.webp" alt="thumbnail" class="w-full h-full object-cover">
         </div>
       </div>
       <div class="preview w-4/5 overflow-hidden h-full">
-        <img src="../imgs/fog-01.webp" alt="detail-image" class="w-full h-full object-cover cursor-zoom-in transition-all duration-300 ease-in-out hover:scale-125">
+        <img src="imgs/fog-01.webp" alt="detail-image" class="w-full h-full object-cover cursor-zoom-in transition-all duration-300 ease-in-out hover:scale-125">
       </div>
     </div>
     <div class="col-right w-full md:w-2/5">
@@ -202,10 +162,6 @@
       </ul>
     </div>
   </div>
-  <?php include('../pages/element/footer.php') ?>
-  <script src="../js/load.js"></script>
-  <script src="../js/detail.js"></script>
-  <script src="../js/cart.js"></script>
 </body>
 
 </html>

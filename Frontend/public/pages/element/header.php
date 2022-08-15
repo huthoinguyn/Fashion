@@ -9,11 +9,11 @@
     <img src="./imgs/logo.png" alt="" />
   </div>
   <ul class="flex list-none font-Montserrat font-normal text-[15px] leading-[26px]">
-    <li class="is-active"><a href="">Home</a></li>
-    <li><a href="./html/product.php">Product</a></li>
-    <li><a href="./html/blog.php">Blog</a></li>
-    <li><a href="./html/about.php">About</a></li>
-    <li><a href="./html/contact.php">Contact</a></li>
+    <li><a href="index.php?page=index">Home</a></li>
+    <li><a href="index.php?page=product">Product</a></li>
+    <li><a href="index.php?page=blog">Blog</a></li>
+    <li><a href="index.php?page=about">About</a></li>
+    <li><a href="index.php?page=contact">Contact</a></li>
   </ul>
   <div class="action flex items-center">
     <div class="user icon relative">

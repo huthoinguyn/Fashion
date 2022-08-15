@@ -1,4 +1,4 @@
-<?php 
+<?php
 include('handle/pagination.php')
 ?>
 <!DOCTYPE html>
@@ -17,27 +17,6 @@ include('handle/pagination.php')
       opacity: 1;
       visibility: visible;
     }
-
-    .backhome {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .pagination{
-      display: flex;
-      list-style: none;
-    }
-    .pagination li a{
-      color: var(--text-color);
-      padding: 12px;
-      display: block;
-      font-size: 20px;
-    }
-
   </style>
 </head>
 
@@ -65,13 +44,15 @@ include('handle/pagination.php')
         // $result = mysqli_query($conn, $query_prod);
         $query_prod = 'SELECT * FROM products LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
         $result = mysqli_query($conn, $query_prod);
-        $i = 0;
+        // $i = 0;
+        $stt = $this_page_first_result;
         while ($prod = mysqli_fetch_array($result)) {
-          $i++;
+          // $i++;
+          $stt++;
         ?>
           <li class="items odd">
             <div class="infoWrap">
-              <p class="stt"><?php echo $i ?></p>
+              <p class="stt"><?php echo $stt ?></p>
 
               <div class="prodSection">
                 <img src="<?php echo 'images/' . $prod['image'] ?> " alt="" class="itemImg w-[128px] h-[100px] object-cover" />
@@ -104,7 +85,7 @@ include('handle/pagination.php')
               </div>
             </div>
           </li>
-        <?php  }
+        <?php   }
         ?>
       </ul>
       <ul class="pagination">

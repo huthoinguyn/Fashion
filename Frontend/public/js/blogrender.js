@@ -1,7 +1,7 @@
 const blogItems = [
   {
     blogTime: "24 JUL, 2022",
-    blogImg: "../imgs/blog-item-image-01.webp",
+    blogImg: "imgs/blog-item-image-01.webp",
     blogTitle: "Black Friday Guide: Best Sales & Discount Codes",
     blogAuthor: "Admin",
     blogCategory: "Cooking, Food",
@@ -10,7 +10,7 @@ const blogItems = [
   },
   {
     blogTime: "24 JUL, 2022",
-    blogImg: "../imgs/blog-item-image-02.webp",
+    blogImg: "imgs/blog-item-image-02.webp",
     blogTitle: "Black Friday Guide: Best Sales & Discount Codes",
     blogAuthor: "Admin",
     blogCategory: "Cooking, Food",
@@ -19,7 +19,7 @@ const blogItems = [
   },
   {
     blogTime: "24 JUL, 2022",
-    blogImg: "../imgs/blog-item-image-03.webp",
+    blogImg: "imgs/blog-item-image-03.webp",
     blogTitle: "Black Friday Guide: Best Sales & Discount Codes",
     blogAuthor: "Admin",
     blogCategory: "Cooking, Food",
@@ -28,7 +28,7 @@ const blogItems = [
   },
   {
     blogTime: "24 JUL, 2022",
-    blogImg: "../imgs/blog-item-image-04.webp",
+    blogImg: "imgs/blog-item-image-04.webp",
     blogTitle: "Black Friday Guide: Best Sales & Discount Codes",
     blogAuthor: "Admin",
     blogCategory: "Cooking, Food",
@@ -38,27 +38,27 @@ const blogItems = [
 ];
 const featuredProducts = [
   {
-    img: "../imgs/featured-product-image-05.jpg",
+    img: "imgs/featured-product-image-05.jpg",
     name: "White Shirt With Pleat Detail Back",
     price: "$19.00",
   },
   {
-    img: "../imgs/featured-product-image-06.webp",
+    img: "imgs/featured-product-image-06.webp",
     name: "Converse All Star Hi Black Canvas",
     price: "$39.00",
   },
   {
-    img: "../imgs/featured-product-image-07.jpg",
+    img: "imgs/featured-product-image-07.jpg",
     name: "Nixon Porter Leather Watch In Tan",
     price: "$17.00",
   },
   {
-    img: "../imgs/featured-product-image-03.webp",
+    img: "imgs/featured-product-image-03.webp",
     name: "Denim jacket blue",
     price: "$39.00",
   },
   {
-    img: "../imgs/category-image-02.jpg",
+    img: "imgs/category-image-02.jpg",
     name: "Nixon Porter Leather Watch In Tan",
     price: "$17.00",
   },
