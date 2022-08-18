@@ -2,43 +2,43 @@ const cart = $("#cart");
 const prodlist = $$(".product-item");
 
 const app = {
-  cartList: [],
-  cartRender: function () {
-    const cartItems = this.cartList.map((item, index) => {
-      return `
-    <li class="cart-item items odd" data-index="${index}">
-    <div class="infoWrap">
-      <div class="cartSection w-[60%]">
-        <img
-          src="${item.img}"
-          alt=""
-          class="itemImg w-[128px] h-[100px] object-cover"
-        />
-        <p class="itemNumber">#QUE-007544-002</p>
-        <h3>${item.name}</h3>
+  // cartList: $$('.cartWrap .cart-item'),
+  // cartRender: function () {
+  //   const cartItems = this.cartList.map((item, index) => {
+  //     return `
+  //   <li class="cart-item items odd" data-index="${index}">
+  //   <div class="infoWrap">
+  //     <div class="cartSection w-[60%]">
+  //       <img
+  //         src="${item.img}"
+  //         alt=""
+  //         class="itemImg w-[128px] h-[100px] object-cover"
+  //       />
+  //       <p class="itemNumber">#QUE-007544-002</p>
+  //       <h3>${item.name}</h3>
 
-        <p><input type="text" class="qty product-qty" value = '1' /> x  $${item.price}</p>
+  //       <p><input type="text" class="qty product-qty" value = '1' /> x  $${item.price}</p>
 
-      </div>
+  //     </div>
 
-      <div class='prodqty w-[10%]'>
-      </div>
+  //     <div class='prodqty w-[10%]'>
+  //     </div>
 
-      <div class="prodTotal cartSection  w-[20%] text-center">
-        <p>$${item.price}</p>
-      </div>
-      <div class="cartSection removeWrap  w-[10%] text-center">
-        <a href="#" class="remove">x</a>
-      </div>
-    </div>
-  </li>
-      `;
-    });
-    $(".cartWrap").innerHTML = cartItems.join("");
-    this.cartNoti();
-    this.cartTotal();
-    this.delCart();
-  },
+  //     <div class="prodTotal cartSection  w-[20%] text-center">
+  //       <p>$${item.price}</p>
+  //     </div>
+  //     <div class="cartSection removeWrap  w-[10%] text-center">
+  //       <a href="#" class="remove">x</a>
+  //     </div>
+  //   </div>
+  // </li>
+  //     `;
+  //   });
+  //   $(".cartWrap").innerHTML = cartItems.join("");
+  //   this.cartNoti();
+  //   this.cartTotal();
+  //   this.delCart();
+  // },
   handleEvents: function () {
     const _this = this;
     $("#cart-icon").onclick = (e) => {
@@ -59,13 +59,13 @@ const app = {
         style = window.getComputedStyle(image, false),
         bi = style.backgroundImage.slice(4, -1).replace(/"/g, "");
       prod.querySelector(".add-cart-btn").onclick = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
         _this.addCart(bi, name, Number(price.slice(1)));
         _this.cartRender();
       };
     });
     $(".user").onclick = (e) => {
-      e.preventDefault();
+      // e.preventDefault();
       $(".user-info").classList.toggle("show-user");
     };
 
@@ -75,19 +75,7 @@ const app = {
         _this.cartRender();
       };
     }
-    // $$(".product-qty").forEach((item) => {
-    //   item.onchange = (e) => {
-    //     item.addEventListener("input", (e) => {
-    //       const quantity = e.target.value;
-    //       let total = _this.productTotal(price, quantity);
-    //       console.log(
-    //         "🚀 ~ file: cart.js ~ line 68 ~ item.addEventListener ~ total",
-    //         total
-    //       );
-    //       _this.cartRender();
-    //     });
-    //   };
-    // });
+
   },
   // prodTotal: function (price, quantity) {
   //   const newPrice = price.slice(1);
@@ -127,23 +115,24 @@ const app = {
       };
     });
   },
-  addCart: function (img, name, price) {
-    this.cartList.push({
-      img,
-      name,
-      price,
-    });
-  },
+  // addCart: function (img, name, price) {
+  //   this.cartList.push({
+  //     img,
+  //     name,
+  //     price,
+  //   });
+  // },
   cartNoti: function () {
-    const cartCount = this.cartList.length;
+    const cartCount = $$('.cartWrap .cart-item').length;
     cartCount >= 1
       ? ($("#cart-icon .cart-noti").style.display = "flex")
       : ($("#cart-icon .cart-noti").style.display = "none");
     $("#cart-icon .cart-noti p").innerText = cartCount;
   },
   start: function () {
-    this.handleEvents();
-    this.cartRender();
+    // this.handleEvents();
+    // this.cartRender();
+    this.cartNoti()
   },
 };
 

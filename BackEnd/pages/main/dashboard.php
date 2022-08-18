@@ -45,7 +45,20 @@
       <div class="box box3">
         <i class="uil uil-share"></i>
         <span class="text">Cart</span>
-        <span class="number">12</span>
+        <?php $conn = mysqli_connect('localhost', 'root', '', 'fashion');
+        $query_prod = 'SELECT * FROM cart';
+        $prod_result = mysqli_query($conn, $query_prod);
+        $prod_total = mysqli_num_rows($prod_result);
+        if ($prod_total) {
+        ?>
+          <span class="number"><?php echo $prod_total ?></span>
+        <?php
+        } else {
+        ?>
+          <span class="number"> Cart Emty</span>
+        <?php
+        }
+        ?>
       </div>
     </div>
   </div>

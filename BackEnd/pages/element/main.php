@@ -35,6 +35,8 @@
     } elseif ($manage == 'category' && $handle == 'edit') {
         include("module/category/category.php");
         include('module/category/feature/edit.php');
+    } elseif ($manage == 'cart' && $handle == 1) {
+        include("pages/main/cart.php");
     } else {
         include("./pages/main/dashboard.php");
     }

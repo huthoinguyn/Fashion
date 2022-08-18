@@ -48,9 +48,9 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="index.php?manage=cart&handle=1">
                     <i class="uil uil-share"></i>
-                    <span class="link-name">Share</span>
+                    <span class="link-name">Cart</span>
                 </a>
             </li>
         </ul>

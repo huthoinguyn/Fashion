@@ -20,6 +20,15 @@ if (!isset($_SESSION['signin'])) {
 </head>
 
 <body>
+<?php
+
+if (isset($message)) {
+  foreach ($message as $message) {
+    echo '<div class="message"><span>' . $message . '</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
+  };
+};
+
+?>
   <?php
   include('./pages/element/loading.php')
   ?>
@@ -33,10 +42,24 @@ if (!isset($_SESSION['signin'])) {
     ?>
   </div>
   <script src="./js/load.js"></script>
-  <script src="./js/slider.js"></script>
   <script src="./js/cart.js"></script>
-  <script src="js/detail.js"></script>
-
+  <script>
+    $("#cart-icon").onclick = (e) => {
+      e.preventDefault();
+      cart.style.display = "block";
+    };
+    document.body.onclick = (e) => {
+      if (e.target.matches("#cart")) cart.style.display = "none";
+    };
+    $(".continue").onclick = (e) => {
+      e.preventDefault();
+      cart.style.display = "none";
+    };
+    $(".user").onclick = (e) => {
+      // e.preventDefault();
+      $(".user-info").classList.toggle("show-user");
+    };
+  </script>
 </body>
 
 </html>

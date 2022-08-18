@@ -162,6 +162,7 @@
       </ul>
     </div>
   </div>
+  <script src="js/detail.js"></script>
 </body>
 
 </html>

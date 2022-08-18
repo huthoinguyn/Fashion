@@ -26,8 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Cấu trúc bảng cho bảng `admin`
 --
-
-CREATE TABLE `admin` (
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE IF NOT EXISTS `admin` (
   `id` int(11) NOT NULL,
   `username` varchar(55) NOT NULL,
   `password` varchar(32) NOT NULL
@@ -46,7 +46,8 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- Cấu trúc bảng cho bảng `categories`
 --
 
-CREATE TABLE `categories` (
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL,
   `category` varchar(20) NOT NULL,
   `sort` int(11) NOT NULL
@@ -69,7 +70,8 @@ INSERT INTO `categories` (`id`, `category`, `sort`) VALUES
 -- Cấu trúc bảng cho bảng `customer`
 --
 
-CREATE TABLE `customer` (
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE IF NOT EXISTS `customer` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `email` varchar(40) NOT NULL,
@@ -93,7 +95,8 @@ INSERT INTO `customer` (`id`, `name`, `email`, `password`) VALUES
 -- Cấu trúc bảng cho bảng `products`
 --
 
-CREATE TABLE `products` (
+DROP TABLE IF EXISTS `products`;
+CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
   `price` float NOT NULL,
