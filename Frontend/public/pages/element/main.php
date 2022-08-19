@@ -15,6 +15,10 @@
         include("html/contact.php");
     } elseif ($page == 'detail') {
         include("html/detail.php");
+    } elseif ($page == 'payment') {
+        include("pages/main/payment.php");
+    } elseif ($page == 'receipt') {
+        include("pages/main/receipt.php");
     } else {
         include("pages/element/index.php");
     }

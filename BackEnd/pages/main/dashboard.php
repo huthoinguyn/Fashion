@@ -92,7 +92,7 @@
         <span class="data-list">ganeshchand@gmail.com</span>
       </div>
       <div class="data joined">
-        <span class="data-title">Joined</span>
+        <span class="data-title">Time</span>
         <span class="data-list">2022-02-12</span>
         <span class="data-list">2022-02-12</span>
         <span class="data-list">2022-02-13</span>
@@ -113,13 +113,13 @@
       </div>
       <div class="data status">
         <span class="data-title">Status</span>
-        <span class="data-list">Liked</span>
-        <span class="data-list">Liked</span>
-        <span class="data-list">Liked</span>
-        <span class="data-list">Liked</span>
-        <span class="data-list">Liked</span>
-        <span class="data-list">Liked</span>
-        <span class="data-list">Liked</span>
+        <span class="data-list">Finish</span>
+        <span class="data-list">Finish</span>
+        <span class="data-list">Pending</span>
+        <span class="data-list">Pending</span>
+        <span class="data-list">Finish</span>
+        <span class="data-list">Pending</span>
+        <span class="data-list">Finish</span>
       </div>
     </div>
   </div>

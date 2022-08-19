@@ -1,24 +1,3 @@
-<?php
-$conn = mysqli_connect("localhost", "root", "", "fashion");
-
-if (isset($_POST['addcart'])) {
-    $customer = $_SESSION['signin'];
-    $prodname = $_POST['prod_name'];
-    $prodimage = $_POST['prod_image'];
-    $prodprice = $_POST['prod_price'];
-    $prodqty = 1;
-
-    $select_cart = mysqli_query($conn, "SELECT * FROM cart WHERE prodname = '$prodname' AND customer = '$customer'");
-
-    if (mysqli_num_rows($select_cart) > 0) {
-        $message[] = 'product already added to cart';
-    } else {
-        $insert_product = mysqli_query($conn, "INSERT INTO `cart`(customer,prodname, price, image, qty) VALUES('$customer','$prodname', '$prodprice', '$prodimage', '$prodqty')");
-        $message[] = 'product added to cart succesfully';
-    }
-}
-?>
-
 <!--  -->
 <?php
 $conn = mysqli_connect("localhost", "root", "", "fashion");
@@ -40,8 +19,9 @@ if (isset($_GET['cate'])) {
             $i++;
         ?>
             <!-- Product-Render -->
-            <form method="POST" enctype="multipart/form-data" class="item1 product-item w-[30%]">
+            <form action="handle/handlecart.php" method="POST" enctype="multipart/form-data" class="item1 product-item w-[30%]">
                 <input type="hidden" name="prod_name" value="<?php echo $row['name']; ?>">
+                <input type="hidden" name="prodId" value="<?php echo $row['id']; ?>">
                 <input type="hidden" name="prod_image" value="<?php echo $row['image']; ?>">
                 <input type="hidden" name="prod_price" value="<?php echo $row['price']; ?>">
                 <a href="index.php?page=detail">

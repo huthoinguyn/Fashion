@@ -75,7 +75,6 @@ const app = {
         _this.cartRender();
       };
     }
-
   },
   // prodTotal: function (price, quantity) {
   //   const newPrice = price.slice(1);
@@ -102,19 +101,6 @@ const app = {
     $(".subtotal .final .value").innerText = "$" + total;
   },
 
-  delCart: function () {
-    const _this = this;
-    $$(".cart-item").forEach((item) => {
-      item.querySelector(".cartSection .remove").onclick = (e) => {
-        e.preventDefault();
-        const delId = item.dataset.index;
-        if (delId > -1) {
-          _this.cartList.splice(delId, 1);
-        }
-        _this.cartRender();
-      };
-    });
-  },
   // addCart: function (img, name, price) {
   //   this.cartList.push({
   //     img,
@@ -123,7 +109,7 @@ const app = {
   //   });
   // },
   cartNoti: function () {
-    const cartCount = $$('.cartWrap .cart-item').length;
+    const cartCount = $$(".cartWrap .cart-item").length;
     cartCount >= 1
       ? ($("#cart-icon .cart-noti").style.display = "flex")
       : ($("#cart-icon .cart-noti").style.display = "none");
@@ -132,7 +118,7 @@ const app = {
   start: function () {
     // this.handleEvents();
     // this.cartRender();
-    this.cartNoti()
+    this.cartNoti();
   },
 };
 
