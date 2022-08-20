@@ -40,11 +40,8 @@ include('handle/pagination.php')
       <ul class="prodWrap">
         <!--<li class="items even">Item 2</li>-->
         <?php
-        // $query_prod = 'SELECT * FROM products';
-        // $result = mysqli_query($conn, $query_prod);
         $query_prod = 'SELECT * FROM products LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
         $result = mysqli_query($conn, $query_prod);
-        // $i = 0;
         $stt = $this_page_first_result;
         while ($prod = mysqli_fetch_array($result)) {
           // $i++;

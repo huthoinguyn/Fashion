@@ -1,22 +1,22 @@
 <!--  -->
 <?php
 $conn = mysqli_connect("localhost", "root", "", "fashion");
+include('handle/pagination.php');
 if (isset($_GET['cate'])) {
     $cate = $_GET['cate'];
     $result = mysqli_query($conn, "SELECT * FROM products WHERE category LIKE '" . $cate . "' ");
 } else {
-    $result = mysqli_query($conn, "SELECT * FROM products");
+    $query_prod = 'SELECT * FROM products LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+    $result = mysqli_query($conn, $query_prod);
 }
 ?>
 
 
-<div class="product-wrap w-[75%] h-full flex">
+<div class="product-wrap w-[75%] h-full flex flex-wrap">
     <!-- Product-List -->
-    <div class="product-list w-full flex flex-wrap gap-6 p-4">
+    <div class="product-list w-full h-full flex flex-wrap gap-6 p-4">
         <?php
-        $i = 0;
         while ($row = mysqli_fetch_array($result)) {
-            $i++;
         ?>
             <!-- Product-Render -->
             <form action="handle/handlecart.php" method="POST" enctype="multipart/form-data" class="item1 product-item w-[30%]">
@@ -47,6 +47,11 @@ if (isset($_GET['cate'])) {
                 </div>
             </form>
         <?php } ?>
-
     </div>
+    <ul class="pagination text-center">
+        <?php
+        for ($page = 1; $page <= $number_of_pages; $page++) { ?>
+            <li><a href="index.php?page=product&pg=<?php echo $page ?>"><?php echo $page ?></a></li>
+        <?php } ?>
+    </ul>
 </div>

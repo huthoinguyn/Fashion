@@ -150,6 +150,7 @@
 
                 <button class="ct-button mt-4 px-8 py-2 rounded-sm btn btn-outline-dark" name="buy">Buy</button>
             </form>
+            <?php $conn->close() ?>
         </div>
     </div>
 </body>

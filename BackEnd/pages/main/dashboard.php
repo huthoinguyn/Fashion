@@ -46,7 +46,7 @@
         <i class="uil uil-share"></i>
         <span class="text">Cart</span>
         <?php $conn = mysqli_connect('localhost', 'root', '', 'fashion');
-        $query_prod = 'SELECT * FROM cart';
+        $query_prod = 'SELECT * FROM receipt';
         $prod_result = mysqli_query($conn, $query_prod);
         $prod_total = mysqli_num_rows($prod_result);
         if ($prod_total) {

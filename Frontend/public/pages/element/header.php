@@ -3,6 +3,18 @@
   header("Location: ./html/form.php");
 }
 ?>
+<?php
+$conn = new mysqli("localhost", "root", "", "fashion");
+$email = $_SESSION['signin'];
+$query = "SELECT * FROM customer WHERE email='$email'";
+// if ($conn->query($query)->num_rows = 0) {
+
+//     header('location: sanpham-ds.php');
+// }
+$customer = $conn->query($query)->fetch_assoc();
+?>
+<!-- <form class="w-4/5 mx-auto pt-7" action="handle/handlepayment.php" method="post"> -->
+<!-- <input type="hidden" name="cusId" value=""> -->
 <!-- header -->
 <header class="w-full h-[80px] flex justify-around items-center transition-all duration-300 bg-white z-50">
   <div class="logo">
@@ -35,6 +47,14 @@
       <div class="cart-noti w-4 h-4 rounded-full absolute -top-2 -right-2 bg-pri hidden justify-center items-center">
         <p class="text-[10px] text-white"></p>
       </div>
+    </div>
+    <div class="line w-[1px] h-4 mx-4 bg-gray-400"></div>
+    <div class="user icon relative">
+      <a href="index.php?page=receipt&cusId=<?php echo $customer['id'] ?>" class="">
+        <span class="material-symbols-outlined">
+          shopping_bag
+        </span>
+      </a>
     </div>
   </div>
 </header>

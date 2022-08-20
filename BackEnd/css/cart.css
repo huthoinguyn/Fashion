@@ -1,0 +1,16 @@
+.cart {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 16px;
+  list-style: none;
+}
+.cart li {
+  width: 5%;
+  text-align: center;
+   color: var(--text-color);
+}
+.cart:nth-child(2n) {
+  background: var(--panel-color-odd);
+ 
+}
