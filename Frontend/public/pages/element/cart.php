@@ -1,4 +1,9 @@
 <?php
+if (isset($message)) {
+    foreach ($message as $message) {
+        echo '<div class="message"><span>' . $message . '</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
+    };
+};
 ?>
 <!-- cart -->
 <div id="cart" class="cart-container fixed inset-0 z-50 hidden">

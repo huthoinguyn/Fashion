@@ -44,7 +44,7 @@
       </div>
       <div class="box box3">
         <i class="uil uil-share"></i>
-        <span class="text">Cart</span>
+        <span class="text">Receipt</span>
         <?php $conn = mysqli_connect('localhost', 'root', '', 'fashion');
         $query_prod = 'SELECT * FROM receipt';
         $prod_result = mysqli_query($conn, $query_prod);

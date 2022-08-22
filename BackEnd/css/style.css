@@ -66,6 +66,15 @@ body.dark .activity-data::-webkit-scrollbar-thumb:hover{
     background: #3A3B3C;
 } */
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 4px;
+  border-right: 2px solid var(--panel-color);
+}
+
 nav {
   position: fixed;
   top: 0;

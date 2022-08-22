@@ -8,9 +8,8 @@
 .cart li {
   width: 5%;
   text-align: center;
-   color: var(--text-color);
+  color: var(--text-color);
 }
 .cart:nth-child(2n) {
   background: var(--panel-color-odd);
- 
 }

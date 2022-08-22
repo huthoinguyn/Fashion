@@ -2,6 +2,18 @@
 <link rel="stylesheet" href="css/cart.css">
 <?php
 $conn = new mysqli("localhost", "root", "", "fashion");
+if (isset($_POST['status'])) {
+    $receiptId = $_POST['id_rc'];
+    $status = $_POST['status'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $total = $_POST['total'];
+    $id_cus = $_POST['id_cus'];
+    mysqli_query($conn, "UPDATE receipt SET phone = '" . $phone . "',address = '" . $address . "',total = '" . $total . "', status = '" . $status . "',id_cus = '" . $id_cus . "' WHERE id_hd = $receiptId");
+}
+?>
+<?php
+$conn = new mysqli("localhost", "root", "", "fashion");
 
 if (isset($_GET['cusId'])) {
     $conn = new mysqli("localhost", "root", "", "fashion");
@@ -56,11 +68,19 @@ $querry_chitiethoadon = mysqli_query($conn, $sql_chitiethoadon);
                 <li>$<?php echo $cus['total'] ?></li>
                 <li style="width: 20%;"><?php echo $cus['time'] ?></li>
                 <li>
-                    <select name="" id="">
-                        <option selected value="pending">Pending</option>
-                        <option value="delivering">Delivering</option>
-                        <option value="finish">Finish</option>
-                    </select>
+                    <form action="" method="POST">
+                        <select name="status" id="" onchange="this.form.submit()">
+                            <option selected value="<?php echo $cus['status'] ?>"><?php echo $cus['status'] ?></option>
+                            <option value="pending">Pending</option>
+                            <option value="delivering">Delivering</option>
+                            <option value="finished">Finished</option>
+                        </select>
+                        <input type="hidden" name="id_rc" value="<?php echo $cus['id_hd'] ?>">
+                        <input type="hidden" name="phone" value="<?php echo $cus['phone'] ?>">
+                        <input type="hidden" name="address" value="<?php echo $cus['address'] ?>">
+                        <input type="hidden" name="total" value="<?php echo $cus['total'] ?>">
+                        <input type="hidden" name="id_cus" value="<?php echo $cus['id_cus'] ?>">
+                    </form>
                 </li>
                 <li>
                     <a style="margin-left: 12px;" href="index.php?manage=cart&handle=1&cusId=<?php echo $cus['id_hd'] ?>" class="prodIcon remove">

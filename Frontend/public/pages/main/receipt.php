@@ -10,6 +10,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
+        a{
+            color: #333;
+        }
     </style>
 </head>
 
@@ -37,6 +40,9 @@
                     <th>
                         Time
                     </th>
+                    <th>
+                        Status
+                    </th>
 
                 </tr>
 
@@ -49,6 +55,7 @@
                             $id_hd = $hd['id_hd'];
                             $total = $hd['total'];
                             $time = $hd['time'];
+                            $status = $hd['status'];
 
                             $receiptdetail = $conn->query("SELECT * FROM receiptdetail WHERE id_receipt = $id_hd ");
                 ?>
@@ -86,6 +93,7 @@
                                 <td><?= '$' . number_format($total) ?></td>
 
                                 <td><?= $time ?></td>
+                                <td style="text-transform: capitalize;"><?= $status ?></td>
 
                             </tr>
                 <?php

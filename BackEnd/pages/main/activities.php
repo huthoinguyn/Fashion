@@ -55,7 +55,7 @@
                     <span class="data-list">New</span>
                 </div>
                 <div class="data status">
-                    <span class="data-list">Pending</span>
+                    <span style="text-transform: capitalize;" class="data-list"><?php echo $cus['status'] ?></span>
                 </div>
             </div>
         <?php } ?>

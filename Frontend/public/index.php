@@ -16,19 +16,16 @@ if (!isset($_SESSION['signin'])) {
   <link rel="stylesheet" href="./css/loading.css" />
   <link rel="stylesheet" href="./css/cart.css" />
   <link rel="stylesheet" href="./css/footer.css" />
-  <style></style>
+  <style>
+  </style>
 </head>
 
 <body>
-<?php
+  <?php
 
-if (isset($message)) {
-  foreach ($message as $message) {
-    echo '<div class="message"><span>' . $message . '</span> <i class="fas fa-times" onclick="this.parentElement.style.display = `none`;"></i> </div>';
-  };
-};
+  
 
-?>
+  ?>
   <?php
   include('./pages/element/loading.php')
   ?>

@@ -69,7 +69,7 @@ form input::placeholder {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  color: #fff;
+  color: #ccc;
 }
 
 form button {
@@ -136,7 +136,7 @@ select::-ms-expand {
 
 .uploader h3 {
   text-align: left;
-  color: var(--text-color);
+  color: #ccc;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 6px;
