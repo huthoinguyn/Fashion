@@ -11,8 +11,8 @@ $querry_cus = mysqli_query($conn, $sql_render_cus);
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./css/add.css" />
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./module/css/style.css">
+  <link rel="stylesheet" href="./module/css/add.css">
   <style>
     .is-show {
       opacity: 1;

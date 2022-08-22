@@ -63,13 +63,13 @@ form input {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.2)
   );
-  color: var(--text-color);
+  color: #fff;
 }
 form input::placeholder {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  color: var(--text-color);
+  color: #fff;
 }
 
 form button {
@@ -81,7 +81,7 @@ form button {
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.2)
   );
-  color: var(--text-color);
+  color: #fff;
   cursor: pointer;
 }
 /* Select */

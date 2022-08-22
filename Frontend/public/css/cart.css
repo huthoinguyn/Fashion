@@ -229,7 +229,6 @@ a.remove:hover {
 }
 .promoCode .btn {
   font-size: 0.85em;
-  paddding: 0.5em 2em;
 }
 
 /* TOTAL AND CHECKOUT  */
@@ -238,7 +237,6 @@ a.remove:hover {
   width: 35%;
 }
 .subtotal .totalRow {
-  paddding: 6px;
   text-align: right;
 }
 .subtotal .totalRow.final {

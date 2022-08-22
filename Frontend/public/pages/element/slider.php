@@ -11,7 +11,7 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus
             architecto aperiam minus possimus minima.
         </p>
-        <a href="./html/product.html" class="w-fit px-6 py-2 bg-pri text-white rounded-sm is-fadeUp">Shopping now</a>
+        <a href="index.php?page=product" class="w-fit px-6 py-2 bg-pri text-white rounded-sm is-fadeUp">Shopping now</a>
         `;
     </div>
 </div>

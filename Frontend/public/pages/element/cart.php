@@ -74,7 +74,10 @@
                     <?php
                     $tax = 4;
                     $ship = 0;
-                    if ($total <= 100) {
+                    if ($total <= 0) {
+                        $tax = 0;
+                        $ship = 0;
+                    } else if ($total <= 100) {
                         $ship = 5;
                     }
                     $total += $ship + $tax;

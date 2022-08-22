@@ -15,8 +15,6 @@ if (!isset($_SESSION['login'])) {
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="./module/css/style.css">
-  <link rel="stylesheet" href="./module/css/add.css">
   <link rel="stylesheet" href="./css/search.css">
   <link rel="stylesheet" href="./css/chart.css">
 
